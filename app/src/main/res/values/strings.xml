@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">GasNow</string>
+    <string name="intro_background">Intro Background</string>
+    <string name="intro_logo">Intro Logo</string>
+    <string name="pager_animation">Pager Animation</string>
+    <string name="frag_img1">Fragment Image 1</string>
+    <string name="gas_now">Gas Now</string>
+    <string name="skip">Skip</string>
+    <string name="fresh">Fresh</string>
+    <string name="everything">Everything</string>
+    <string name="long_text1">Everything you will experience will be absolutely fresh</string>
+    <string name="tab1">Tab1</string>
+    <string name="home">Home</string>
+    <string name="delivery">Delivery</string>
+</resources>

@@ -1,0 +1,29 @@
+import org.gradle.api.initialization.resolve.RepositoriesMode
+
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.PREFER_SETTINGS)
+    repositories {
+        google()
+        mavenCentral()
+        repositories {
+            maven {
+                name = "GitHubPackages"
+
+                url = uri("https://maven.pkg.github.com/Cuberto/liquid-swipe-android")
+                credentials {
+                    username = System.getenv('gpr.usr') ?: '91687840'
+                    password = System.getenv('gpr.key') ?: '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'
+                }
+            }
+        }
+    }
+}
+rootProject.name = "GasNow"
+include ':app'
