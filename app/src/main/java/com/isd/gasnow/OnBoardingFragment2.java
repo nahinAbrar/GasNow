@@ -1,9 +1,11 @@
 package com.isd.gasnow;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -14,6 +16,15 @@ public class OnBoardingFragment2 extends Fragment {
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        return (ViewGroup) inflater.inflate(R.layout.fragment_on_boarding2,container,false);
+        ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_on_boarding2,container,false);
+
+        TextView skipTextView = root.findViewById(R.id.boarding2SkiptText);
+
+        skipTextView.setOnClickListener(v -> {
+            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            startActivity(intent);
+        });
+
+        return root;
     }
 }
