@@ -20,7 +20,7 @@
     <string name="login_logo">Login Logo</string>
     <string name="welcome_to_gas_now">Welcome to Gas Now!</string>
     <string name="mobile_number">Mobile Number</string>
-    <string name="password">Enter Password</string>
+    <string name="password">Password</string>
     <string name="enter_email">Enter Email</string>
     <string name="remember_me">Remember Me</string>
     <string name="forget_password">Forget Password</string>
@@ -36,4 +36,12 @@
     <string name="easy">Easy</string>
     <string name="payment">Payment</string>
     <string name="nextbtn">nextBtn</string>
+    <string name="welcome_image">Welcome Image</string>
+    <string name="on_demand_gas_delivery">On Demand Gas Delivery</string>
+    <string name="sign_up">Sign up</string>
+    <string name="how_gas_now_works">How Gas Now Works?</string>
+    <string name="create_naccount">Create\nAccount</string>
+    <string name="email">Email</string>
+    <string name="next">Next</string>
+    <string name="areaName">Area i.e. Motijheel</string>
 </resources>

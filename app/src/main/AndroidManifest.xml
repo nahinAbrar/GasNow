@@ -12,6 +12,18 @@
         android:theme="@style/Theme.GasNow"
         tools:targetApi="31">
         <activity
+            android:name=".SignUpThirdActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignUpSecondActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SignupActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WelcomeActivity"
+            android:exported="false" />
+        <activity
             android:name=".LoginActivity"
             android:exported="false" />
         <activity
@@ -25,7 +37,7 @@
         </activity>
         <activity
             android:name=".MainActivity"
-            android:exported="true"></activity>
+            android:exported="true" />
     </application>
 
 </manifest>

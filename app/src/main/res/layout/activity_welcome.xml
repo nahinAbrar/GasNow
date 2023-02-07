@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:padding="30dp"
+    tools:context=".WelcomeActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <ImageView
+
+            android:layout_width="match_parent"
+            android:layout_height="402dp"
+            android:contentDescription="@string/welcome_image"
+            android:src="@drawable/welcompic"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-black"
+            android:text="@string/welcome_to_gas_now"
+            android:textColor="@color/black"
+            android:textSize="33sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="sans-serif-light"
+            android:text="@string/on_demand_gas_delivery"
+            android:textColor="@color/black"
+            android:textSize="26sp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/wcLoginBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:onClick = "callLoginPage"
+                android:layout_marginEnd="10dp"
+                android:textColor="@color/white"
+                android:background="@color/purple_500"
+                android:layout_weight="1"
+                android:text="@string/log_in"
+                style="?android:attr/buttonBarButtonStyle"
+                android:transitionName="transition_login" />
+
+            <Button
+                android:id="@+id/wcSignUpBtn"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="10dp"
+                android:textColor="@color/white"
+                android:background="@color/purple_500"
+                android:onClick = "callSignUpPage"
+                android:layout_weight="1"
+                android:text="@string/sign_up"
+                style="?android:attr/buttonBarButtonStyle"
+                android:transitionName="transition_signup"/>
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/wcHGWBtn"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:background="@color/white"
+            android:layout_weight="1"
+            android:text="@string/how_gas_now_works"
+            style="?android:attr/buttonBarButtonStyle" />
+
+
+    </LinearLayout>
+
+
+</ScrollView>

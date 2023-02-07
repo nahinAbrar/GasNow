@@ -19,6 +19,7 @@ public class OnBoardingFragment1 extends Fragment {
 
         ViewGroup root = (ViewGroup) inflater.inflate(R.layout.fragment_on_boarding1,container,false);
 
+
         skipTextView = root.findViewById(R.id.boarding1SkipText);
 
         skipTextView.setOnClickListener(v -> {

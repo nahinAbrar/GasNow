@@ -30,7 +30,7 @@ public class OnBoardingFragment3 extends Fragment {
         });
 
         fab.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            Intent intent = new Intent(getActivity(), WelcomeActivity.class);
             startActivity(intent);
         });
         return root;
