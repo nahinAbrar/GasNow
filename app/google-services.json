@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "802822029131",
+    "project_id": "gasnow-626582aar",
+    "storage_bucket": "gasnow-626582aar.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:802822029131:android:b9919d991cc04cd48532ce",
+        "android_client_info": {
+          "package_name": "com.isd.gasnow"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "802822029131-8otr8dsab8kl8bpvaopsaudfdufkodue.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA35zJ3zR06CMzdoHa1v7w0BIHOSt9GSKA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "802822029131-8otr8dsab8kl8bpvaopsaudfdufkodue.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
