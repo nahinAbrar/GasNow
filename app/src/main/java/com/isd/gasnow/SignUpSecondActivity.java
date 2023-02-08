@@ -47,8 +47,8 @@ public class SignUpSecondActivity extends AppCompatActivity {
         String _userName = getIntent().getStringExtra("userName");
         String _email = getIntent().getStringExtra("email");
         String _password = getIntent().getStringExtra("password");
-        String _area = getIntent().getStringExtra("area");
-        String _address = getIntent().getStringExtra("address");
+        String _area = area.getEditText().getText().toString().trim();
+        String _address = address.getEditText().getText().toString().trim();
 
         Intent intent = new Intent(getApplicationContext(), SignUpThirdActivity.class);
 
@@ -58,6 +58,8 @@ public class SignUpSecondActivity extends AppCompatActivity {
         intent.putExtra("password", _password);
         intent.putExtra("area", _area);
         intent.putExtra("address", _address);
+
+
 
         //Add Transition
         Pair[] pairs = new Pair[4];

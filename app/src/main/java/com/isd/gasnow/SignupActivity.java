@@ -33,7 +33,7 @@ public class SignupActivity extends AppCompatActivity {
         loginBtn = findViewById(R.id.signUpLoginBtn);
         caText = findViewById(R.id.signUpCaText);
 
-        fullName = findViewById(R.id.signpFullName);
+        fullName = findViewById(R.id.signupFullName);
         userName = findViewById(R.id.signupUserName);
         email = findViewById(R.id.signupEmail);
         password = findViewById(R.id.signupPassword);
@@ -46,10 +46,10 @@ public class SignupActivity extends AppCompatActivity {
             return;
         }
 
-        String _fullName = getIntent().getStringExtra("fullName");
-        String _userName = getIntent().getStringExtra("userName");
-        String _email = getIntent().getStringExtra("email");
-        String _password = getIntent().getStringExtra("password");
+        String _fullName = fullName.getEditText().getText().toString().trim();
+        String _userName = userName.getEditText().getText().toString().trim();
+        String _email = email.getEditText().getText().toString().trim();
+        String _password = password.getEditText().getText().toString();
 
         Intent intent = new Intent(getApplicationContext(), SignUpSecondActivity.class);
 

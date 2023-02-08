@@ -42,7 +42,7 @@ public class VerifyOTPActivity extends AppCompatActivity {
         fullName = getIntent().getStringExtra("fullName");
         userName = getIntent().getStringExtra("userName");
         email = getIntent().getStringExtra("email");
-        passWord = getIntent().getStringExtra("passWord");
+        passWord = getIntent().getStringExtra("password");
         area = getIntent().getStringExtra("area");
         address = getIntent().getStringExtra("address");
         phoneNumber = getIntent().getStringExtra("phoneNumber");
@@ -149,7 +149,10 @@ public class VerifyOTPActivity extends AppCompatActivity {
         FirebaseDatabase rootNode = FirebaseDatabase.getInstance("https://gasnow-626582aar-default-rtdb.asia-southeast1.firebasedatabase.app");
         DatabaseReference reference = rootNode.getReference("Users");
 
-        reference.setValue("working");
+        UserHelperClass addNewUser = new UserHelperClass(fullName,userName,email,passWord,area,address,phoneNumber);
+
+        //userName node er under e each user er data add hobe
+        reference.child(userName).setValue(addNewUser);
 
 
 
