@@ -46,6 +46,11 @@ public class SignUpThirdActivity extends AppCompatActivity {
         String _address = getIntent().getStringExtra("address");
 
         String _getUserEnteredPhoneNumber = phoneNumber.getEditText().getText().toString().trim();
+        //For trimming Bd Numbers 017... to 17
+        if(_getUserEnteredPhoneNumber.charAt(0) == '0')
+        {
+            _getUserEnteredPhoneNumber = _getUserEnteredPhoneNumber.substring(1);
+        }
         String _phoneNumber = "+"+countryCodePicker.getSelectedCountryCode()+_getUserEnteredPhoneNumber;
 
 

@@ -5,6 +5,7 @@ import static android.content.ContentValues.TAG;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -131,6 +132,7 @@ public class VerifyOTPActivity extends AppCompatActivity {
                             //Log.d(TAG, "signInWithCredential:success");
                             Toast.makeText(VerifyOTPActivity.this, "Verification Completed!", Toast.LENGTH_SHORT).show();
                             storeUserData();
+                            startActivity(new Intent(getApplicationContext(), WelcomeActivity.class));
 
                             FirebaseUser user = task.getResult().getUser();
                             // Update UI
@@ -152,7 +154,7 @@ public class VerifyOTPActivity extends AppCompatActivity {
         UserHelperClass addNewUser = new UserHelperClass(fullName,userName,email,passWord,area,address,phoneNumber);
 
         //userName node er under e each user er data add hobe
-        reference.child(userName).setValue(addNewUser);
+        reference.child(phoneNumber).setValue(addNewUser);
 
 
 

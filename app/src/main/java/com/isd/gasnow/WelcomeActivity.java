@@ -41,7 +41,7 @@ public class WelcomeActivity extends AppCompatActivity {
         Intent intent = new Intent (getApplicationContext(), SignupActivity.class);
 
         Pair[] pairs = new Pair[1];
-        pairs[0] = new Pair<View, String>(findViewById(R.id.wcSignUpBtn), "transition_signip");
+        pairs[0] = new Pair<View, String>(findViewById(R.id.wcSignUpBtn), "transition_signup");
 
         ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(WelcomeActivity.this,pairs);
         startActivity(intent, activityOptions.toBundle());

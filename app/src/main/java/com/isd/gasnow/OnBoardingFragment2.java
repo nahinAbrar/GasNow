@@ -21,7 +21,7 @@ public class OnBoardingFragment2 extends Fragment {
         TextView skipTextView = root.findViewById(R.id.boarding2SkiptText);
 
         skipTextView.setOnClickListener(v -> {
-            Intent intent = new Intent(getActivity(), LoginActivity.class);
+            Intent intent = new Intent(getActivity(), WelcomeActivity.class);
             startActivity(intent);
         });
 
