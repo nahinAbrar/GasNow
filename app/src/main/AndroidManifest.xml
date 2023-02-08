@@ -12,6 +12,21 @@
         android:theme="@style/Theme.GasNow"
         tools:targetApi="31">
         <activity
+            android:name=".ForgetPassSuccessMessageActivity"
+            android:exported="false" />
+        <activity
+            android:name=".SetNewPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MakeSelectionActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ForgetPasswordActivity"
+            android:exported="false" />
+        <activity
+            android:name=".VerifyOTPActivity"
+            android:exported="false" />
+        <activity
             android:name=".SignUpThirdActivity"
             android:exported="false" />
         <activity

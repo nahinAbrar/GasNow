@@ -44,4 +44,18 @@
     <string name="email">Email</string>
     <string name="next">Next</string>
     <string name="areaName">Area i.e. Motijheel</string>
+    <string name="co_nde">Co\nde</string>
+    <string name="verification">Verification</string>
+    <string name="forget_pass_email">Provide The Email that is Registered to GasNow</string>
+    <string name="make_nselection">Make\nSelection</string>
+    <string name="reset_pass_text">Select which contact detail should we use to reset your password</string>
+    <string name="via_sms">Via SMS -</string>
+    <string name="phoneNo">+8801309040483</string>
+    <string name="via_email">Via Email -</string>
+    <string name="emailID">asmnahin21@gmail.com</string>
+    <string name="new_pass_back_button">New Pass Back Button</string>
+    <string name="new_pass_text">Your Identity Has Been Verified!\nSet New Password</string>
+    <string name="new_password">New Password</string>
+    <string name="set_password">Set Password</string>
+    <string name="password_updated_successfully">Password Updated Successfully!</string>
 </resources>

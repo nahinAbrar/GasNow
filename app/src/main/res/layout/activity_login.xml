@@ -18,6 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:padding="5dp"
+            app:tint="@color/black"
             android:src="@drawable/back_48"
             android:contentDescription="@string/log_in"
 
