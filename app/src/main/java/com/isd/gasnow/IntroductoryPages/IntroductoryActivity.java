@@ -24,7 +24,7 @@ public class IntroductoryActivity extends AppCompatActivity {
 
     Animation anim;
 
-    private static int SPLASH_TIME_OUT = 6000;
+    private static int SPLASH_TIME_OUT = 5200;
     SharedPreferences sharedPreferences;
 
 
