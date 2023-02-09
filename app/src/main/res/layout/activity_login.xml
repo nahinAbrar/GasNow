@@ -156,6 +156,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:layout_gravity="center"
+                android:onClick="callCreateAccount"
                 android:layout_below="@+id/loginBtn"
                 android:background="#FFF"
                 android:fontFamily="sans-serif"

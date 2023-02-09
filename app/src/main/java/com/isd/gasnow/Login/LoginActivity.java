@@ -28,6 +28,7 @@ import com.isd.gasnow.MainActivity;
 import com.isd.gasnow.PasswordReset.ForgetPasswordActivity;
 import com.isd.gasnow.IntroductoryPages.WelcomeActivity;
 import com.isd.gasnow.R;
+import com.isd.gasnow.SignUp.SignupActivity;
 
 import java.util.HashMap;
 
@@ -212,5 +213,10 @@ public class LoginActivity extends AppCompatActivity {
 
     public void callForgetPasswordPage(View view) {
         startActivity(new Intent(getApplicationContext(), ForgetPasswordActivity.class));
+    }
+
+    public void callCreateAccount(View view){
+        startActivity(new Intent(getApplicationContext(), SignupActivity.class));
+        finish();
     }
 }
