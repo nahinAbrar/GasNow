@@ -1,4 +1,4 @@
-package com.isd.gasnow;
+package com.isd.gasnow.IntroductoryPages;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,6 +12,7 @@ import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.isd.gasnow.R;
 
 public class OnBoardingFragment3 extends Fragment {
 

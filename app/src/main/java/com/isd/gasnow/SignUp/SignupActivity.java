@@ -1,4 +1,4 @@
-package com.isd.gasnow;
+package com.isd.gasnow.SignUp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,6 +13,7 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
+import com.isd.gasnow.R;
 
 public class SignupActivity extends AppCompatActivity {
 

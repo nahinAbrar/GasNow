@@ -1,4 +1,4 @@
-package com.isd.gasnow;
+package com.isd.gasnow.Database;
 
 public class UserHelperClass {
 

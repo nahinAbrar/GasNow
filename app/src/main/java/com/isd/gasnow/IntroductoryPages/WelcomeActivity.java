@@ -1,4 +1,4 @@
-package com.isd.gasnow;
+package com.isd.gasnow.IntroductoryPages;
 
 import static android.app.PendingIntent.getActivity;
 
@@ -10,7 +10,10 @@ import android.os.Bundle;
 import android.util.Pair;
 import android.view.View;
 import android.view.WindowManager;
-import android.widget.Button;
+
+import com.isd.gasnow.Login.LoginActivity;
+import com.isd.gasnow.R;
+import com.isd.gasnow.SignUp.SignupActivity;
 
 public class WelcomeActivity extends AppCompatActivity {
 

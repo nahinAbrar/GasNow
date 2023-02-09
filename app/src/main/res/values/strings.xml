@@ -46,7 +46,7 @@
     <string name="areaName">Area i.e. Motijheel</string>
     <string name="co_nde">Co\nde</string>
     <string name="verification">Verification</string>
-    <string name="forget_pass_email">Provide The Email that is Registered to GasNow</string>
+    <string name="forget_pass_phone">Provide The Phone Number that is Registered to GasNow</string>
     <string name="make_nselection">Make\nSelection</string>
     <string name="reset_pass_text">Select which contact detail should we use to reset your password</string>
     <string name="via_sms">Via SMS -</string>

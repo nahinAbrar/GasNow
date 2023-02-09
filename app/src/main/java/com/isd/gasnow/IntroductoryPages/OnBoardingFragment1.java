@@ -1,4 +1,4 @@
-package com.isd.gasnow;
+package com.isd.gasnow.IntroductoryPages;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -10,6 +10,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
+
+import com.isd.gasnow.R;
 
 public class OnBoardingFragment1 extends Fragment {
     TextView skipTextView;

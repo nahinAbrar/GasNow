@@ -1,4 +1,4 @@
-package com.isd.gasnow;
+package com.isd.gasnow.IntroductoryPages;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -7,18 +7,25 @@ import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentStatePagerAdapter;
 import androidx.viewpager.widget.ViewPager;
 
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
 import com.airbnb.lottie.LottieAnimationView;
+import com.isd.gasnow.R;
 
 public class IntroductoryActivity extends AppCompatActivity {
     ImageView logo, appName, splashImage;
     LottieAnimationView lottieAnimationView;
 
     Animation anim;
+
+    private static int SPLASH_TIME_OUT = 6000;
+    SharedPreferences sharedPreferences;
 
 
     private static final int NUM_PAGES = 3;
@@ -37,6 +44,27 @@ public class IntroductoryActivity extends AppCompatActivity {
         logo.animate().translationY(2000).setDuration(1000).setStartDelay(4000);
         appName.animate().translationY(2000).setDuration(1000).setStartDelay(4000);
         lottieAnimationView.animate().translationY(2000).setDuration(1000).setStartDelay(4000);
+
+
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                sharedPreferences = getSharedPreferences("sharedPreferences", MODE_PRIVATE);
+                boolean isFirstTime = sharedPreferences.getBoolean("firstTime",true);
+
+                if(isFirstTime){
+                    //goto boarding
+
+                    SharedPreferences.Editor editor = sharedPreferences.edit();
+                    editor.putBoolean("firstTime", false);
+                    editor.apply();
+                }else{
+                    Intent intent = new Intent(getApplicationContext(),WelcomeActivity.class);
+                    startActivity(intent);
+                    finish();
+                }
+            }
+        },SPLASH_TIME_OUT);
 
         ViewPager viewPager = findViewById(R.id.pager);
         ScreenSlidePagerAdapter pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());

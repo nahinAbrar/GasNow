@@ -12,37 +12,37 @@
         android:theme="@style/Theme.GasNow"
         tools:targetApi="31">
         <activity
-            android:name=".ForgetPassSuccessMessageActivity"
+            android:name=".PasswordReset.ForgetPassSuccessMessageActivity"
             android:exported="false" />
         <activity
-            android:name=".SetNewPasswordActivity"
+            android:name=".PasswordReset.SetNewPasswordActivity"
             android:exported="false" />
         <activity
             android:name=".MakeSelectionActivity"
             android:exported="false" />
         <activity
-            android:name=".ForgetPasswordActivity"
+            android:name=".PasswordReset.ForgetPasswordActivity"
             android:exported="false" />
         <activity
-            android:name=".VerifyOTPActivity"
+            android:name=".SignUp.VerifyOTPActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpThirdActivity"
+            android:name=".SignUp.SignUpThirdActivity"
             android:exported="false" />
         <activity
-            android:name=".SignUpSecondActivity"
+            android:name=".SignUp.SignUpSecondActivity"
             android:exported="false" />
         <activity
-            android:name=".SignupActivity"
+            android:name=".SignUp.SignupActivity"
             android:exported="false" />
         <activity
-            android:name=".WelcomeActivity"
+            android:name=".IntroductoryPages.WelcomeActivity"
             android:exported="false" />
         <activity
-            android:name=".LoginActivity"
+            android:name=".Login.LoginActivity"
             android:exported="false" />
         <activity
-            android:name=".IntroductoryActivity"
+            android:name=".IntroductoryPages.IntroductoryActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

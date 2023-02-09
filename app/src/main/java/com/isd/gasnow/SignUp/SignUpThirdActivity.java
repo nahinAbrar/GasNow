@@ -1,4 +1,4 @@
-package com.isd.gasnow;
+package com.isd.gasnow.SignUp;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,7 @@ import android.widget.ScrollView;
 
 import com.google.android.material.textfield.TextInputLayout;
 import com.hbb20.CountryCodePicker;
+import com.isd.gasnow.R;
 
 public class SignUpThirdActivity extends AppCompatActivity {
 

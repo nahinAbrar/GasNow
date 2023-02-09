@@ -1,4 +1,4 @@
-package com.isd.gasnow;
+package com.isd.gasnow.SignUp;
 
 import static android.content.ContentValues.TAG;
 
@@ -25,6 +25,10 @@ import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.isd.gasnow.Database.UserHelperClass;
+import com.isd.gasnow.IntroductoryPages.WelcomeActivity;
+import com.isd.gasnow.R;
+import com.isd.gasnow.PasswordReset.SetNewPasswordActivity;
 
 import java.util.concurrent.TimeUnit;
 
@@ -33,6 +37,7 @@ public class VerifyOTPActivity extends AppCompatActivity {
     String codeBySystem;
 
     String fullName, userName, email, passWord, area, address, phoneNumber;
+    String whatToDo;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -47,6 +52,7 @@ public class VerifyOTPActivity extends AppCompatActivity {
         area = getIntent().getStringExtra("area");
         address = getIntent().getStringExtra("address");
         phoneNumber = getIntent().getStringExtra("phoneNumber");
+        whatToDo = getIntent().getStringExtra("whatToDo");
 
         sendVerificationCodeToUser(phoneNumber);
     }
@@ -130,9 +136,16 @@ public class VerifyOTPActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             //Log.d(TAG, "signInWithCredential:success");
-                            Toast.makeText(VerifyOTPActivity.this, "Verification Completed!", Toast.LENGTH_SHORT).show();
-                            storeUserData();
-                            startActivity(new Intent(getApplicationContext(), WelcomeActivity.class));
+                            Log.d(TAG, "WHAT TO DO ER MAAAAN:" + whatToDo);
+                            if(whatToDo != null && whatToDo.equals("updatePassword"))
+                            {
+                                setNewPassword();
+                            }else {
+                                Toast.makeText(VerifyOTPActivity.this, "Verification Completed!", Toast.LENGTH_SHORT).show();
+                                storeUserData();
+                                startActivity(new Intent(getApplicationContext(), WelcomeActivity.class));
+                            }
+
 
                             FirebaseUser user = task.getResult().getUser();
                             // Update UI
@@ -145,6 +158,13 @@ public class VerifyOTPActivity extends AppCompatActivity {
                         }
                     }
                 });
+    }
+
+    private void setNewPassword() {
+        Intent intent = new Intent(getApplicationContext(), SetNewPasswordActivity.class);
+        intent.putExtra("phoneNumber",phoneNumber);
+        startActivity(intent);
+        finish();
     }
 
     private void storeUserData() {

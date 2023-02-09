@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="30dp"
-    tools:context=".SignUpThirdActivity"
+    tools:context=".SignUp.SignUpThirdActivity"
     android:id="@+id/signupThirdScrollView"
     android:transitionName="transition_OTP_screen">
 
