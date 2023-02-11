@@ -1,11 +1,10 @@
-package com.isd.gasnow;
+package com.isd.gasnow.DashBoard;
 
-public class FeaturedHelperClass {
-
+public class MostViewedAdapterHelperClass {
     int image;
     String title, description;
 
-    public FeaturedHelperClass(int image, String title, String description) {
+    public MostViewedAdapterHelperClass(int image, String title, String description) {
         this.image = image;
         this.title = title;
         this.description = description;

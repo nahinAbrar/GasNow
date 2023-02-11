@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".UserDashboard">
+    tools:context=".DashBoard.UserDashboard">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -240,7 +240,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/dashboardFeaturedRecycleView"
                     android:layout_width="match_parent"
-                    android:layout_height="280dp"
+                    android:layout_height="300dp"
                     android:layout_toEndOf="@id/dashboardFeaturedCard" />
 
 
@@ -277,6 +277,7 @@
                 </RelativeLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dashboardMostviewedRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
 
@@ -314,6 +315,7 @@
                 </RelativeLayout>
 
                 <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/dashboardCategoriesRecyclerView"
                     android:layout_width="match_parent"
                     android:layout_height="100dp" />
 

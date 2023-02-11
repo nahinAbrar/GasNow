@@ -1,25 +1,21 @@
-package com.isd.gasnow;
+package com.isd.gasnow.DashBoard;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
-
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
-
+import com.isd.gasnow.R;
 import java.util.ArrayList;
 
 public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.FeaturedViewHolder> {
-
     ArrayList<FeaturedHelperClass> featuredHelperClassArrayList;
-
     //data holder
     public FeaturedAdapter(ArrayList<FeaturedHelperClass> featuredHelperClassArrayList) {
         this.featuredHelperClassArrayList = featuredHelperClassArrayList;
     }
-
     @NonNull
     @Override
     public FeaturedViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
@@ -27,7 +23,6 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.Featur
         FeaturedViewHolder featuredViewHolder = new FeaturedViewHolder(view);
         return featuredViewHolder;
     }
-
     @Override
     public void onBindViewHolder(@NonNull FeaturedViewHolder holder, int position) {
         FeaturedHelperClass featuredHelperClass = featuredHelperClassArrayList.get(position);
@@ -36,7 +31,6 @@ public class FeaturedAdapter extends RecyclerView.Adapter<FeaturedAdapter.Featur
         holder.title.setText(featuredHelperClass.getTitle());
         holder.desc.setText(featuredHelperClass.getDescription());
     }
-
     @Override
     public int getItemCount() {
         return featuredHelperClassArrayList.size();

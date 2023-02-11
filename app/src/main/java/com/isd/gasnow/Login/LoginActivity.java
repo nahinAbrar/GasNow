@@ -11,7 +11,6 @@ import android.net.NetworkInfo;
 import android.os.Bundle;
 import android.provider.Settings;
 import android.view.View;
-import android.view.WindowManager;
 import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.RelativeLayout;
@@ -24,12 +23,11 @@ import com.google.firebase.database.Query;
 import com.google.firebase.database.ValueEventListener;
 import com.hbb20.CountryCodePicker;
 import com.isd.gasnow.Database.SessionManager;
-import com.isd.gasnow.MainActivity;
 import com.isd.gasnow.PasswordReset.ForgetPasswordActivity;
 import com.isd.gasnow.IntroductoryPages.WelcomeActivity;
 import com.isd.gasnow.R;
 import com.isd.gasnow.SignUp.SignupActivity;
-import com.isd.gasnow.UserDashboard;
+import com.isd.gasnow.DashBoard.UserDashboard;
 
 import java.util.HashMap;
 
