@@ -58,4 +58,18 @@
     <string name="new_password">New Password</string>
     <string name="set_password">Set Password</string>
     <string name="password_updated_successfully">Password Updated Successfully!</string>
+    <string name="search_nearby">Search Nearby</string>
+    <string name="featured_text">Top Rated and Demanding Stores, Stations</string>
+    <string name="view_all">View all</string>
+    <string name="most_viewed">Most Viewed</string>
+    <string name="categories">Categories</string>
+    <string name="gas_station">Gas Station</string>
+    <string name="gas_store">Gas Store</string>
+    <string name="retail_store">Retail Store</string>
+    <string name="care">Care</string>
+    <string name="featured_locations">Featured Locations</string>
+    <string name="menu_icon">Menu Icon</string>
+    <string name="profile_icon">Profile Icon</string>
+    <string name="dummy">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
+    <string name="featuredimage1">featuredImage1</string>
 </resources>

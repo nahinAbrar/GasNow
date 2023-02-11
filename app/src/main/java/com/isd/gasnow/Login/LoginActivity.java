@@ -29,6 +29,7 @@ import com.isd.gasnow.PasswordReset.ForgetPasswordActivity;
 import com.isd.gasnow.IntroductoryPages.WelcomeActivity;
 import com.isd.gasnow.R;
 import com.isd.gasnow.SignUp.SignupActivity;
+import com.isd.gasnow.UserDashboard;
 
 import java.util.HashMap;
 
@@ -44,7 +45,7 @@ public class LoginActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
         setContentView(R.layout.activity_login);
 
         countryCodePicker = findViewById(R.id.loginCodePicker);
@@ -133,7 +134,7 @@ public class LoginActivity extends AppCompatActivity {
                         SessionManager sessionManager = new SessionManager(LoginActivity.this, SessionManager.USER_SESSION);
                         sessionManager.createLoginSession(_fullName,_userName,_email,_passWord,_area,_address,_phoneNumber);
 
-                        startActivity(new Intent(getApplicationContext(),MainActivity.class));
+                        startActivity(new Intent(getApplicationContext(), UserDashboard.class));
                         finish();
 
                         progressBar.setVisibility(View.GONE);

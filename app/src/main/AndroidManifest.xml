@@ -12,6 +12,9 @@
         android:theme="@style/Theme.GasNow"
         tools:targetApi="31">
         <activity
+            android:name=".UserDashboard"
+            android:exported="false" />
+        <activity
             android:name=".PasswordReset.ForgetPassSuccessMessageActivity"
             android:exported="false" />
         <activity
