@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+      <item
+          android:id="@+id/nav_home"
+          android:title="Home"
+          android:icon="@drawable/home_outlined_96"/>
+        <item
+            android:id="@+id/nav_search"
+            android:title="Orders"
+            android:icon="@drawable/purchase_order_96px"/>
+        <item
+            android:id="@+id/nav_all_categories"
+            android:title="Cart"
+            android:icon="@drawable/shopping_cart_96px"/>
+    </group>
+
+    <item android:title="Profile">
+        <menu>
+
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/nav_login"
+                    android:title="Login"
+                    android:icon="@drawable/login_96"/>
+                <item
+                    android:id="@+id/nav_profile"
+                    android:title="Profile"
+                    android:icon="@drawable/user"/>
+                <item
+                    android:id="@+id/nav_logout"
+                    android:title="Logout"
+                    android:icon="@drawable/logout_96"/>
+            </group>
+        </menu>
+
+    </item>
+
+    <item android:title="Share">
+        <menu>
+
+            <group android:checkableBehavior="none">
+                <item
+                    android:id="@+id/nav_share"
+                    android:title="Share"
+                    android:icon="@drawable/share_96"/>
+                <item
+                    android:id="@+id/nav_rateus"
+                    android:title="Rate us"
+                    android:icon="@drawable/rate_96"/>
+
+            </group>
+        </menu>
+
+    </item>
+
+</menu>
