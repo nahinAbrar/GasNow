@@ -72,4 +72,12 @@
     <string name="profile_icon">Profile Icon</string>
     <string name="dummy">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</string>
     <string name="featuredimage1">featuredImage1</string>
+    <string name="fragment_3_desc">Fulfill your gas needs with GasNow</string>
+    <string name="needs">Needs</string>
+    <string name="fulfil">Fulfil</string>
+    <string name="save">Save</string>
+    <string name="time">Time</string>
+    <string name="frag2_desc">Order from us instead of going stations/stores</string>
+    <string name="on_demand">On Demand</string>
+    <string name="frag_1_desc">Gas Now offers on demand delivery system for all your gas needs!</string>
 </resources>

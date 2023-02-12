@@ -37,7 +37,7 @@
             android:layout_centerVertical="true"
             android:contentDescription="@string/menu_icon"
             android:elevation="4dp"
-            android:src="@drawable/menu_96" />
+            android:src="@drawable/menu_icon" />
 
         <ImageView
             android:layout_width="40dp"

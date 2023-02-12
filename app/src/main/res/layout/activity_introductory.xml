@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -13,69 +13,52 @@
         android:layout_height="900dp"
         android:contentDescription="@string/intro_background"
         android:scaleType="centerCrop"
-        android:src="@drawable/bg"
+        android:src="@drawable/welcome_blur" />
 
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
-
-    <ImageView
-        android:id="@+id/introLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/inverse_logo"
-
-        app:layout_constraintVertical_bias=".1"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-
-        android:contentDescription="@string/intro_logo"
-
-        />
-
-    <ImageView
-        android:id="@+id/introLogoName"
-        android:layout_width="300dp"
+    <LinearLayout
+        android:layout_marginTop="100dp"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:contentDescription="@string/intro_logo"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
 
-        app:layout_constraintVertical_bias="0"
-        android:src="@drawable/white_app_name"
+        <ImageView
+            android:id="@+id/introLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/logo"
+            android:contentDescription="@string/intro_logo"
+            android:layout_marginTop="80dp"
+            />
 
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/introLogo" />
+        <TextView
+            android:id="@+id/introSlogan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fulfil Gas Needs"
+            android:textColor="@color/light_white"
+            android:textSize="30sp"
+            android:fontFamily="@font/bellota_bold"/>
 
+    </LinearLayout>
 
-    <com.airbnb.lottie.LottieAnimationView
-        android:id="@+id/introAnimationView"
+    <TextView
+        android:id="@+id/intro_copyright"
         android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        app:lottie_rawRes="@raw/splash"
-        app:lottie_autoPlay="true"
-        app:layout_constraintVertical_bias="0"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/introLogoName"
-        />
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/bellota_bold"
+        android:text="Powered by Triquetra - 2023"
+        android:textColor="@color/light_white" />
 
 
     <com.cuberto.liquid_swipe.LiquidPager
         android:id="@+id/pager"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:contentDescription="@string/pager_animation"
-        />
+        android:contentDescription="@string/pager_animation" />
 
 
-
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

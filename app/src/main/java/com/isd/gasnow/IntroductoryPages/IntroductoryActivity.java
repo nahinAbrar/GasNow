@@ -15,15 +15,17 @@ import android.view.WindowManager;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.airbnb.lottie.LottieAnimationView;
 import com.isd.gasnow.R;
 
 public class IntroductoryActivity extends AppCompatActivity {
-    ImageView logo, appName, splashImage;
-    LottieAnimationView lottieAnimationView;
+    ImageView splashImage, logo;
+    TextView slogan, copyright;
 
-    Animation anim;
+
+    Animation anim, sideAnim, bottomAnim;
 
     private static int SPLASH_TIME_OUT = 5200;
     SharedPreferences sharedPreferences;
@@ -37,15 +39,25 @@ public class IntroductoryActivity extends AppCompatActivity {
         getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
         setContentView(R.layout.activity_introductory);
 
-        logo = findViewById(R.id.introLogo);
-        appName = findViewById(R.id.introLogoName);
         splashImage = findViewById(R.id.introBg);
-        lottieAnimationView = findViewById(R.id.introAnimationView);
+        logo = findViewById(R.id.introLogo);
+        slogan = findViewById(R.id.introSlogan);
+        copyright = findViewById(R.id.intro_copyright);
+
+        sideAnim = AnimationUtils.loadAnimation(this, R.anim.side_anim);
+        bottomAnim = AnimationUtils.loadAnimation(this, R.anim.bottom_anim);
+
+        logo.setAnimation(sideAnim);
+        splashImage.setAnimation(sideAnim);
+        slogan.setAnimation(sideAnim);
+        copyright.setAnimation(bottomAnim);
+
 
         splashImage.animate().translationY(-2500).setDuration(1000).setStartDelay(4000);
         logo.animate().translationY(2000).setDuration(1000).setStartDelay(4000);
-        appName.animate().translationY(2000).setDuration(1000).setStartDelay(4000);
-        lottieAnimationView.animate().translationY(2000).setDuration(1000).setStartDelay(4000);
+        slogan.animate().translationY(2000).setDuration(1000).setStartDelay(4000);
+        copyright.animate().translationY(-2500).setDuration(1000).setStartDelay(4000);
+
 
 
         new Handler().postDelayed(new Runnable() {
