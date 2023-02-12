@@ -1,6 +1,6 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <!-- Base application theme. -->
-    <style name="Theme.GasNow" parent="Theme.MaterialComponents.Light.NoActionBar.Bridge">
+    <style name="Theme.GasNow" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/light_white</item>
         <item name="colorPrimaryVariant">@color/pastel_sky</item>
@@ -17,7 +17,7 @@
     <style name="navigationTheme">
         
         <item name="colorPrimary">@color/light_white</item>
-        <item name="colorControlHighlight">@color/sweet_pink</item>
+        <item name="colorControlHighlight">@color/darker_blue</item>
 
     </style>
 </resources>

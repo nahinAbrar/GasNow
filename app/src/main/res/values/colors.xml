@@ -21,6 +21,13 @@
     <color name="light_purple">#DC9CFD</color>
     <color name="dark_blue">#34495e</color>
     <color name="magenta">#833471</color>
+    <color name="darker_blue">#546de5</color>
+    <color name="clicked_blue">#778beb</color>
+
+    <color name="purple_dark">#574b90</color>
+    <color name="purple_light">#786fa6</color>
+
+    <color name="grey">#ced6e0</color>
 
 
 

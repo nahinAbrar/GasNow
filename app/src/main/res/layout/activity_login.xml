@@ -6,7 +6,8 @@
     android:layout_height="match_parent"
     android:padding="30dp"
     tools:context=".Login.LoginActivity"
-    android:transitionName="transition_login">
+    android:transitionName="transition_login"
+    android:background="@color/light_white">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -21,8 +22,8 @@
             app:tint="@color/black"
             android:src="@drawable/back_48"
             android:onClick="callWelcomePage"
-            android:contentDescription="@string/log_in"
 
+            android:contentDescription="@string/log_in"
             />
 
         <TextView
@@ -46,6 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/black_border"
+                android:backgroundTint="@color/pastel_sky"
                 app:ccp_autoDetectCountry="true"
                 app:ccp_showFlag="true"
                 app:ccp_showFullName="true"
@@ -129,7 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentEnd="true"
                     android:onClick="callForgetPasswordPage"
-                    android:background="#FFF"
+                    android:background="@color/transparent"
                     android:text="@string/forget_password" />
 
 
@@ -140,7 +142,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:text="@string/log_in"
-                android:background="@color/black"
+                android:background="@drawable/button_design"
                 android:layout_below="@+id/remFpLayout"
                 android:textColor="@color/white"
                 android:fontFamily="sans-serif"
@@ -158,7 +160,7 @@
                 android:layout_gravity="center"
                 android:onClick="callCreateAccount"
                 android:layout_below="@+id/loginBtn"
-                android:background="#FFF"
+                android:background="@drawable/secondary_button_design"
                 android:fontFamily="sans-serif"
                 android:text="@string/create_account" />
 

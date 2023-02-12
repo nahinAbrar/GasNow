@@ -80,4 +80,5 @@
     <string name="frag2_desc">Order from us instead of going stations/stores</string>
     <string name="on_demand">On Demand</string>
     <string name="frag_1_desc">Gas Now offers on demand delivery system for all your gas needs!</string>
+    <string name="copy"><![CDATA[GasNow V1.0.0\n\u00a9 Triquetra - 2023]]></string>
 </resources>
