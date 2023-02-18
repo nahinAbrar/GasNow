@@ -1,16 +1,24 @@
 package com.isd.gasnow.SignUp;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.app.ActivityOptions;
 import android.content.Intent;
+import android.os.Handler;
 import android.util.Pair;
 import android.view.View;
 import android.os.Bundle;
 import android.view.WindowManager;
 import android.widget.ScrollView;
 
+import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.textfield.TextInputLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.hbb20.CountryCodePicker;
 import com.isd.gasnow.R;
 
@@ -34,6 +42,7 @@ public class SignUpThirdActivity extends AppCompatActivity {
 
     public void callOTPPage(View view)
     {
+
         if(!validatePhoneNumber())
         {
             return;
@@ -54,24 +63,53 @@ public class SignUpThirdActivity extends AppCompatActivity {
         }
         String _phoneNumber = "+"+countryCodePicker.getSelectedCountryCode()+_getUserEnteredPhoneNumber;
 
+        Query query = FirebaseDatabase
+                .getInstance("https://gasnow-626582aar-default-rtdb.asia-southeast1.firebasedatabase.app")
+                .getReference("Users").orderByChild("phoneNumber").equalTo(_phoneNumber);
 
-        Intent intent = new Intent(getApplicationContext(), VerifyOTPActivity.class);
+        query.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                if(!(snapshot.exists())){
+                    Intent intent = new Intent(getApplicationContext(), VerifyOTPActivity.class);
 
-        intent.putExtra("fullName", _fullName);
-        intent.putExtra("userName", _userName);
-        intent.putExtra("email", _email);
-        intent.putExtra("password", _password);
-        intent.putExtra("area", _area);
-        intent.putExtra("address", _address);
-        intent.putExtra("phoneNumber", _phoneNumber);
+                    intent.putExtra("fullName", _fullName);
+                    intent.putExtra("userName", _userName);
+                    intent.putExtra("email", _email);
+                    intent.putExtra("password", _password);
+                    intent.putExtra("area", _area);
+                    intent.putExtra("address", _address);
+                    intent.putExtra("phoneNumber", _phoneNumber);
 
-        Pair[] pairs = new Pair[1];
-        pairs[0] = new Pair<View, String>(scrollView, "transition_OTP_screen");
+                    Pair[] pairs = new Pair[1];
+                    pairs[0] = new Pair<View, String>(scrollView, "transition_OTP_screen");
 
 
-        ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(SignUpThirdActivity.this, pairs);
+                    ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(SignUpThirdActivity.this, pairs);
 
-        startActivity(intent, activityOptions.toBundle());
+                    startActivity(intent, activityOptions.toBundle());
+
+                }else {
+                    Snackbar.make(scrollView,"Phone Number Already Exists!",Snackbar.LENGTH_LONG).show();
+                    new Handler().postDelayed(new Runnable() {
+                        @Override
+                        public void run() {
+
+                            Intent i=new Intent(SignUpThirdActivity.this,SignupActivity.class);
+                            startActivity(i);
+                        }
+                    }, 3000);
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+
+
 
     }
 

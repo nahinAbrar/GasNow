@@ -132,8 +132,15 @@ public class LoginActivity extends AppCompatActivity {
                         SessionManager sessionManager = new SessionManager(LoginActivity.this, SessionManager.USER_SESSION);
                         sessionManager.createLoginSession(_fullName,_userName,_email,_passWord,_area,_address,_phoneNumber);
 
-                        startActivity(new Intent(getApplicationContext(), UserDashboard.class));
-                        finish();
+                        Intent intent = new Intent(getApplicationContext(),UserDashboard.class);
+                        intent.putExtra("fullName",_fullName);
+                        intent.putExtra("userName",_userName);
+                        intent.putExtra("phoneNumber",_phoneNumber);
+                        intent.putExtra("email",_email);
+                        intent.putExtra("area",_area);
+                        intent.putExtra("address",_address);
+
+                        startActivity(intent);
 
                         progressBar.setVisibility(View.GONE);
                         Toast.makeText(LoginActivity.this, _fullName + "\n"

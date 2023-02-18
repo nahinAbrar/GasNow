@@ -7,7 +7,7 @@
           android:title="Home"
           android:icon="@drawable/home_outlined_96"/>
         <item
-            android:id="@+id/nav_search"
+            android:id="@+id/nav_orders"
             android:title="Orders"
             android:icon="@drawable/purchase_order_96px"/>
         <item
@@ -20,10 +20,6 @@
         <menu>
 
             <group android:checkableBehavior="single">
-                <item
-                    android:id="@+id/nav_login"
-                    android:title="Login"
-                    android:icon="@drawable/login_96"/>
                 <item
                     android:id="@+id/nav_profile"
                     android:title="Profile"

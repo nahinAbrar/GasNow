@@ -40,8 +40,10 @@
             android:src="@drawable/menu_icon" />
 
         <ImageView
+            android:id="@+id/dashboard_profile_icon"
             android:layout_width="40dp"
             android:layout_height="40dp"
+            android:onClick="callProfile"
             android:layout_alignParentEnd="true"
             android:contentDescription="@string/profile_icon"
             android:layout_centerVertical="true"
@@ -73,8 +75,10 @@
                     android:textSize="28sp"/>
 
                 <RelativeLayout
+                    android:id="@+id/dashboardSearchBar"
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
+                    android:onClick="callMaps"
                     android:layout_below="@id/dashboardLogoText"
                     android:layout_marginLeft="40dp"
                     android:layout_marginTop="20dp"
@@ -228,7 +232,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginStart="20dp"
                 android:layout_marginTop="20dp"
-                android:background="@color/light_white">
+                >
 
                 <LinearLayout
                     android:id="@+id/dashboardFeaturedCard"
@@ -268,8 +272,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:background="@color/light_white"
+                android:layout_marginTop="30dp"
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -298,7 +301,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/dashboardMostviewedRecyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp" />
+                    android:layout_height="150dp" />
 
 
             </LinearLayout>
@@ -306,8 +309,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="40dp"
-                android:background="@color/light_white"
+                android:layout_marginTop="30dp"
+
                 android:orientation="vertical"
                 android:padding="20dp">
 
@@ -336,7 +339,7 @@
                 <androidx.recyclerview.widget.RecyclerView
                     android:id="@+id/dashboardCategoriesRecyclerView"
                     android:layout_width="match_parent"
-                    android:layout_height="100dp" />
+                    android:layout_height="match_parent" />
 
 
             </LinearLayout>

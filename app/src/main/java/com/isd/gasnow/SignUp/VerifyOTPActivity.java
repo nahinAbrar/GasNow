@@ -7,13 +7,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.chaos.view.PinView;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.FirebaseException;
 import com.google.firebase.FirebaseTooManyRequestsException;
 import com.google.firebase.auth.AuthResult;
@@ -23,8 +27,12 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 import com.isd.gasnow.Database.UserHelperClass;
 import com.isd.gasnow.IntroductoryPages.WelcomeActivity;
 import com.isd.gasnow.R;
@@ -38,12 +46,18 @@ public class VerifyOTPActivity extends AppCompatActivity {
 
     String fullName, userName, email, passWord, area, address, phoneNumber;
     String whatToDo;
+    ScrollView scrollView;
+    SignupActivity signupActivity = new SignupActivity();
+
+    TextView verify;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_verify_otpactivity);
         pinView = findViewById(R.id.pinView);
+        scrollView = findViewById(R.id.verifyLayout);
+        verify = findViewById(R.id.verifyOTPText);
 
         fullName = getIntent().getStringExtra("fullName");
         userName = getIntent().getStringExtra("userName");
@@ -54,10 +68,14 @@ public class VerifyOTPActivity extends AppCompatActivity {
         phoneNumber = getIntent().getStringExtra("phoneNumber");
         whatToDo = getIntent().getStringExtra("whatToDo");
 
+        verify.setText("Enter The Code Sent To "+ phoneNumber);
         sendVerificationCodeToUser(phoneNumber);
+
     }
 
+
     private void sendVerificationCodeToUser(String phoneNumber) {
+
 
         FirebaseAuth mAuth = FirebaseAuth.getInstance();
         PhoneAuthOptions options =
@@ -136,7 +154,7 @@ public class VerifyOTPActivity extends AppCompatActivity {
                         if (task.isSuccessful()) {
                             // Sign in success, update UI with the signed-in user's information
                             //Log.d(TAG, "signInWithCredential:success");
-                            Log.d(TAG, "WHAT TO DO ER MAAAAN:" + whatToDo);
+
                             if(whatToDo != null && whatToDo.equals("updatePassword"))
                             {
                                 setNewPassword();

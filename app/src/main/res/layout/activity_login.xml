@@ -16,10 +16,10 @@
 
         <ImageView
             android:id="@+id/loginBackBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:padding="5dp"
-            app:tint="@color/black"
+            app:tint="@color/darker_blue"
             android:src="@drawable/back_48"
             android:onClick="callWelcomePage"
 
@@ -30,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="50dp"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="@font/dosis_bold"
             android:text="@string/log_in"
             android:textAllCaps="true"
             android:textColor="@color/black"
@@ -172,7 +172,8 @@
                 android:padding="20dp"
                 android:background="@drawable/progress"
                 android:elevation="8dp"
-                android:visibility="gone">
+                android:visibility="gone"
+                >
 
                 <ProgressBar
                     android:layout_width="30dp"

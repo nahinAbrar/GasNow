@@ -81,4 +81,10 @@
     <string name="on_demand">On Demand</string>
     <string name="frag_1_desc">Gas Now offers on demand delivery system for all your gas needs!</string>
     <string name="copy"><![CDATA[GasNow V1.0.0\n\u00a9 Triquetra - 2023]]></string>
+    <string name="code">Code</string>
+    <string name="categories_back_button">Categories Back Button</string>
+    <string name="household_gas_needs">Household Gas Needs</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="name">Name</string>
 </resources>

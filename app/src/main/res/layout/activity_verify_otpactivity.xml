@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/verifyLayout"
     tools:context=".SignUp.VerifyOTPActivity"
     android:background="@color/light_white"
     android:padding="30dp">
@@ -18,19 +19,22 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:src="@drawable/close_48"
-            app:tint="@color/black"
+            app:tint="@color/darker_blue"
             android:padding="5dp"/>
+
+
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/co_nde"
+            android:text="@string/code"
             android:textSize="100sp"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="@font/dosis_bold"
             android:textColor="@color/black"
             android:textAllCaps="true"
             android:layout_gravity="center"
             android:includeFontPadding="false"
+            android:layout_marginTop="90dp"
             />
 
         <TextView
@@ -38,7 +42,7 @@
             android:layout_height="wrap_content"
             android:text="@string/verification"
             android:textSize="24sp"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="@font/dosis_bold"
             android:textColor="@color/black"
             android:textAllCaps="true"
             android:layout_gravity="center"
@@ -46,12 +50,13 @@
             />
 
         <TextView
+            android:id="@+id/verifyOTPText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Enter One Time OTP Sent on +8801309040483"
             android:textSize="18sp"
             android:layout_marginTop="50dp"
-            android:fontFamily="sans-serif"
+            android:fontFamily="@font/dosis"
             android:textAlignment="center"
             android:textColor="@color/black"
 

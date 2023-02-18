@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:id="@+id/bottom_nav_profile"
+        android:title="Profile"
+        android:icon="@drawable/user"
+        app:cnb_iconColor = "@color/white"
+        app:cnb_backgroundColor = "@color/darker_blue"/>
+
+    <item android:id="@+id/bottom_nav_history"
+        android:title="History"
+        android:icon="@drawable/logout_96"
+        app:cnb_backgroundColor = "@color/pastel_pink"/>
+
+    <item android:id="@+id/bottom_nav_manage"
+        android:title="Manage"
+        android:icon="@drawable/logout_96"
+        app:cnb_backgroundColor = "@color/pastel_sky"/>
+
+</menu>

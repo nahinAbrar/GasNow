@@ -22,6 +22,7 @@ dependencyResolutionManagement {
                     password = System.getenv('gpr.key') ?: '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'
                 }
             }
+            maven { url 'https://jitpack.io' }
         }
     }
 }

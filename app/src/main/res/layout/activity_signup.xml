@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="30dp"
+    android:id="@+id/signUpScrollView"
     android:background="@color/light_white"
     tools:context=".SignUp.SignupActivity">
 
@@ -15,8 +16,9 @@
 
         <ImageView
             android:id="@+id/signUpBackBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            app:tint="@color/darker_blue"
             android:contentDescription="@string/sign_up"
             android:padding="5dp"
             android:src="@drawable/back_48"
@@ -28,7 +30,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="@font/dosis_bold"
             android:text="@string/create_naccount"
             android:textAllCaps="true"
             android:textColor="@color/black"

@@ -1,5 +1,13 @@
 package com.isd.gasnow.DashBoard;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.util.Log;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ImageView;
+import android.widget.LinearLayout;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.view.GravityCompat;
@@ -7,18 +15,11 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import android.graphics.drawable.GradientDrawable;
-import android.os.Bundle;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.RelativeLayout;
-
 import com.google.android.material.navigation.NavigationView;
-import com.isd.gasnow.DashBoard.FeaturedAdapter;
-import com.isd.gasnow.DashBoard.FeaturedHelperClass;
+import com.isd.gasnow.IntroductoryPages.WelcomeActivity;
+import com.isd.gasnow.MainActivity;
 import com.isd.gasnow.R;
+import com.isd.gasnow.User.UserProfileDashboard;
 
 import java.util.ArrayList;
 
@@ -36,6 +37,8 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
     ImageView menuIcon;
     LinearLayout contentView;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -48,6 +51,8 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         navigationView = findViewById(R.id.nav_navigationview);
         menuIcon = findViewById(R.id.navbar_menuIcon);
         contentView = findViewById(R.id.content);
+
+
 
 
         featuredRecycler();
@@ -82,7 +87,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         drawerLayout.addDrawerListener(new DrawerLayout.SimpleDrawerListener() {
             @Override
             public void onDrawerSlide(View drawerView, float slideOffset) {
-                final float diffScaledOffset = slideOffset * (1-END_SCALE);
+                final float diffScaledOffset = slideOffset * (1 - END_SCALE);
                 final float offsetScale = 1 - diffScaledOffset;
                 contentView.setScaleX(offsetScale);
                 contentView.setScaleY(offsetScale);
@@ -100,18 +105,44 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         });
 
 
-
     }
 
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+        String _fullName = getIntent().getStringExtra("fullName");
+        String _userName = getIntent().getStringExtra("userName");
+        String _phoneNumber = getIntent().getStringExtra("phoneNumber");
+        String _email = getIntent().getStringExtra("email");
+        String _area = getIntent().getStringExtra("area");
+        String _address = getIntent().getStringExtra("address");
+        switch (item.getItemId()) {
+            case R.id.nav_logout:
+                Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.nav_orders:
+                startActivity(new Intent(getApplicationContext(), AllCategoriesActivity.class));
+                break;
+            case R.id.nav_profile:
+                intent = new Intent(getApplicationContext(),UserProfileDashboard.class);
+                intent.putExtra("fullName",_fullName);
+                intent.putExtra("userName",_userName);
+                intent.putExtra("phoneNumber",_phoneNumber);
+                intent.putExtra("email",_email);
+                intent.putExtra("area",_area);
+                intent.putExtra("address",_address);
+                startActivity(intent);
+                break;
+        }
+
         return true;
     }
+
     @Override
     public void onBackPressed() {
-        if(drawerLayout.isDrawerVisible(GravityCompat.START)){
+        if (drawerLayout.isDrawerVisible(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        }else {
+        } else {
             super.onBackPressed();
         }
     }
@@ -123,11 +154,9 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 //        gradient3 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xfff7c59f, 0xFFf7c59f});
 //        gradient4 = new GradientDrawable(GradientDrawable.Orientation.LEFT_RIGHT, new int[]{0xffb8d7f5, 0xffb8d7f5});
         ArrayList<CategoriesHelperClass> categoriesHelperClasses = new ArrayList<>();
-        categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card1, "Education"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card1, "HOSPITAL"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card1, "Restaurant"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card1, "Shopping"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card1, "Transport"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card1, "Household Gas/Fuel"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card2, "Vehicle Gas"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card2, "Business Solutions"));
         categoriesRecycler.setHasFixedSize(true);
         adapter = new CategoriesAdapter(categoriesHelperClasses);
         categoriesRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -160,6 +189,27 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     }
 
+    public void callProfile(View view){
+        String _fullName = getIntent().getStringExtra("fullName");
+        String _userName = getIntent().getStringExtra("userName");
+        String _phoneNumber = getIntent().getStringExtra("phoneNumber");
+        String _email = getIntent().getStringExtra("email");
+        String _area = getIntent().getStringExtra("area");
+        String _address = getIntent().getStringExtra("address");
+
+        Intent intent = new Intent(getApplicationContext(),UserProfileDashboard.class);
+        intent.putExtra("fullName",_fullName);
+        intent.putExtra("userName",_userName);
+        intent.putExtra("phoneNumber",_phoneNumber);
+        intent.putExtra("email",_email);
+        intent.putExtra("area",_area);
+        intent.putExtra("address",_address);
+        startActivity(intent);
+    }
+
+    public void callMaps(View view){
+        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+    }
 
 
 }

@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.ScrollView;
 import android.widget.TextView;
 
 import com.google.android.material.textfield.TextInputLayout;
@@ -20,6 +21,8 @@ public class SignupActivity extends AppCompatActivity {
     ImageView backBtn;
     Button nextBtn, loginBtn;
     TextView caText;
+
+    ScrollView signupScrollView;
 
     TextInputLayout fullName, userName, email, password;
 
@@ -38,6 +41,8 @@ public class SignupActivity extends AppCompatActivity {
         userName = findViewById(R.id.signupUserName);
         email = findViewById(R.id.signupEmail);
         password = findViewById(R.id.signupPassword);
+
+        signupScrollView = findViewById(R.id.signUpScrollView);
     }
 
     public void callNextSignUpScreen(View view) {

@@ -15,20 +15,20 @@
 
         <ImageView
             android:id="@+id/signUpBackBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:contentDescription="@string/sign_up"
             android:padding="5dp"
             android:src="@drawable/back_48"
             android:transitionName="transition_back_btn"
-            />
+            app:tint="@color/darker_blue" />
 
         <TextView
             android:id="@+id/signUpCaText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:fontFamily="sans-serif-black"
+            android:fontFamily="@font/dosis_bold"
             android:text="@string/create_naccount"
             android:textAllCaps="true"
             android:textColor="@color/black"
