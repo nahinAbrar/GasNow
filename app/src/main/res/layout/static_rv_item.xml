@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:id="@+id/staticRvLinearLayout"
+    android:layout_height="match_parent"
+    android:layout_margin="15dp"
+    android:background="@drawable/static_rv_bg"
+    android:elevation="5dp">
+
+    <ImageView
+        android:id="@+id/staticRvItemImage"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:src="@drawable/gas_icon"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:contentDescription="@string/gas_icon" />
+
+    <TextView
+        android:id="@+id/staticRvItemText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/gas"
+        android:textSize="20sp"
+        android:fontFamily="@font/dosis_bold"
+        android:layout_marginTop="10dp"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

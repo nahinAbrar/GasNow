@@ -17,8 +17,10 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.navigation.NavigationView;
 import com.isd.gasnow.IntroductoryPages.WelcomeActivity;
+import com.isd.gasnow.ItemsDashBoard.ItemsDashboard;
 import com.isd.gasnow.MainActivity;
 import com.isd.gasnow.R;
+import com.isd.gasnow.StoreStationDetails.StoreStationDetails;
 import com.isd.gasnow.User.UserProfileDashboard;
 
 import java.util.ArrayList;
@@ -120,9 +122,6 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
                 startActivity(intent);
                 break;
-            case R.id.nav_orders:
-                startActivity(new Intent(getApplicationContext(), AllCategoriesActivity.class));
-                break;
             case R.id.nav_profile:
                 intent = new Intent(getApplicationContext(),UserProfileDashboard.class);
                 intent.putExtra("fullName",_fullName);
@@ -209,6 +208,14 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
 
     public void callMaps(View view){
         startActivity(new Intent(getApplicationContext(), MainActivity.class));
+    }
+
+    public void callItemsDash(View view){
+        startActivity(new Intent(getApplicationContext(), ItemsDashboard.class));
+    }
+
+    public void callCategories(View view){
+        startActivity(new Intent(getApplicationContext(), AllCategoriesActivity.class));
     }
 
 

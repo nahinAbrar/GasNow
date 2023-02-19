@@ -54,6 +54,7 @@ dependencies {
     implementation 'org.jetbrains.kotlin:kotlin-stdlib:1.7.10'
     implementation 'com.google.android.gms:play-services-maps:18.1.0'
     implementation 'com.karumi:dexter:6.2.3'
+    implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
 
 }

@@ -143,11 +143,8 @@ public class LoginActivity extends AppCompatActivity {
                         startActivity(intent);
 
                         progressBar.setVisibility(View.GONE);
-                        Toast.makeText(LoginActivity.this, _fullName + "\n"
-                                + _userName + "\n"
-                                + _email + "\n"
-                                + _area + "\n"
-                                + _address + "\n", Toast.LENGTH_LONG).show();
+                        Toast.makeText(LoginActivity.this, "Login Successful!\n" +
+                                "Welcome " + _fullName + "\n", Toast.LENGTH_LONG).show();
 
 
                     } else {

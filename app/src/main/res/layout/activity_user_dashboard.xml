@@ -239,6 +239,7 @@
                     android:layout_width="170dp"
                     android:layout_height="280dp"
                     android:layout_margin="10dp"
+                    android:onClick="CallStore"
                     android:background="@color/pastel_blue"
                     android:orientation="vertical">
 
@@ -289,9 +290,11 @@
                         android:textSize="20sp" />
 
                     <TextView
+                        android:id="@+id/userDashboardMostViewed"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
+                        android:onClick="callItemsDash"
                         android:layout_centerVertical="true"
                         android:fontFamily="sans-serif"
                         android:text="@string/view_all" />
@@ -331,6 +334,7 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentEnd="true"
                         android:layout_centerVertical="true"
+                        android:onClick="callCategories"
                         android:fontFamily="sans-serif"
                         android:text="@string/view_all" />
 
