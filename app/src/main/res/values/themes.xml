@@ -2,8 +2,8 @@
     <!-- Base application theme. -->
     <style name="Theme.GasNow" parent="Theme.MaterialComponents.DayNight.NoActionBar.Bridge">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/light_white</item>
-        <item name="colorPrimaryVariant">@color/pastel_sky</item>
+        <item name="colorPrimary">@color/darker_blue</item>
+        <item name="colorPrimaryVariant">@color/clicked_blue</item>
         <item name="colorOnPrimary">@color/white</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/pastel_blue</item>

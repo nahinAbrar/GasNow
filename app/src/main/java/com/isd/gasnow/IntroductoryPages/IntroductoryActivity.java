@@ -22,17 +22,11 @@ import com.isd.gasnow.R;
 
 public class IntroductoryActivity extends AppCompatActivity {
     ImageView splashImage, logo;
-    TextView slogan, copyright;
-
-
+    TextView copyright;
+    LottieAnimationView animationView;
     Animation anim, sideAnim, bottomAnim;
-
-    private static int SPLASH_TIME_OUT = 5200;
     SharedPreferences sharedPreferences;
-
-
     private static final int NUM_PAGES = 3;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,7 +35,7 @@ public class IntroductoryActivity extends AppCompatActivity {
 
         splashImage = findViewById(R.id.introBg);
         logo = findViewById(R.id.introLogo);
-        slogan = findViewById(R.id.introSlogan);
+        animationView = findViewById(R.id.splashAnimationView);
         copyright = findViewById(R.id.intro_copyright);
 
         sideAnim = AnimationUtils.loadAnimation(this, R.anim.side_anim);
@@ -49,36 +43,32 @@ public class IntroductoryActivity extends AppCompatActivity {
 
         logo.setAnimation(sideAnim);
         splashImage.setAnimation(sideAnim);
-        slogan.setAnimation(sideAnim);
+        animationView.setAnimation(sideAnim);
         copyright.setAnimation(bottomAnim);
 
 
-        splashImage.animate().translationY(-2500).setDuration(1000).setStartDelay(4000);
-        logo.animate().translationY(2000).setDuration(1000).setStartDelay(4000);
-        slogan.animate().translationY(2000).setDuration(1000).setStartDelay(4000);
-        copyright.animate().translationY(-2500).setDuration(1000).setStartDelay(4000);
+        splashImage.animate().translationY(-2500).setDuration(1500).setStartDelay(4500);
+        logo.animate().translationY(2000).setDuration(1500).setStartDelay(4500);
+        animationView.animate().translationY(2000).setDuration(1500).setStartDelay(4500);
+        copyright.animate().translationY(-2500).setDuration(1500).setStartDelay(4500);
 
 
+        int SPLASH_TIME_OUT = 5650;
+        new Handler().postDelayed(() -> {
+            sharedPreferences = getSharedPreferences("sharedPreferences", MODE_PRIVATE);
+            boolean isFirstTime = sharedPreferences.getBoolean("firstTime",true);
 
-        new Handler().postDelayed(new Runnable() {
-            @Override
-            public void run() {
-                sharedPreferences = getSharedPreferences("sharedPreferences", MODE_PRIVATE);
-                boolean isFirstTime = sharedPreferences.getBoolean("firstTime",true);
-
-                if(isFirstTime){
-                    //goto boarding
-
-                    SharedPreferences.Editor editor = sharedPreferences.edit();
-                    editor.putBoolean("firstTime", false);
-                    editor.apply();
-                }else{
-                    Intent intent = new Intent(getApplicationContext(),WelcomeActivity.class);
-                    startActivity(intent);
-                    finish();
-                }
+            if(isFirstTime){
+                //goto boarding\
+                SharedPreferences.Editor editor = sharedPreferences.edit();
+                editor.putBoolean("firstTime", false);
+                editor.apply();
+            }else{
+                Intent intent = new Intent(getApplicationContext(),WelcomeActivity.class);
+                startActivity(intent);
+                finish();
             }
-        },SPLASH_TIME_OUT);
+        }, SPLASH_TIME_OUT);
 
         ViewPager viewPager = findViewById(R.id.pager);
         ScreenSlidePagerAdapter pagerAdapter = new ScreenSlidePagerAdapter(getSupportFragmentManager());

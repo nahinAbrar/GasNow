@@ -37,7 +37,7 @@
     <string name="payment">Payment</string>
     <string name="nextbtn">nextBtn</string>
     <string name="welcome_image">Welcome Image</string>
-    <string name="on_demand_gas_delivery">On Demand Gas Delivery</string>
+    <string name="on_demand_gas_delivery">On Demand Gas Delivery System</string>
     <string name="sign_up">Sign up</string>
     <string name="how_gas_now_works">How Gas Now Works?</string>
     <string name="create_naccount">Create\nAccount</string>
@@ -81,6 +81,7 @@
     <string name="on_demand">On Demand</string>
     <string name="frag_1_desc">Gas Now offers on demand delivery system for all your gas needs!</string>
     <string name="copy"><![CDATA[GasNow V1.0.0\n\u00a9 Triquetra - 2023]]></string>
+    <string name="copy2"><![CDATA[GasNow V1.0.0 \u00a9 Triquetra - 2023]]></string>
     <string name="code">Code</string>
     <string name="categories_back_button">Categories Back Button</string>
     <string name="household_gas_needs">Household Gas Needs</string>
@@ -97,4 +98,14 @@
     <string name="price">3500</string>
     <string name="currency">BDT</string>
     <string name="item">Item</string>
+    <string name="procedurebackbtn">procedureBackBtn</string>
+    <string name="why_gas_now">Why Gas Now?</string>
+    <string name="procedure_paragraph">Gas Now is an on demand gas/fuel delivery app.
+        You can order your daily gas needs from here.
+        We provide verified products to you through the best sellers of the town.
+        You can also order the fuel for your car or other transportation of your business.</string>
+    <string name="credit_paragraph">App developed by Triquetra.
+        \nFrontend designs are covered by Fahim \u0026 Afia.\nBackend and Frontend\'s overall combination was covered by Nahin.\nApp\'s logos/icons/photos have been taken from looka, unsplash, pichon, freepik, flaticon respectively.</string>
+    <string name="password_updated">Password Updated</string>
+    <string name="enter_one_time_otp_sent_on_8801309040483">Enter One Time OTP Sent on +8801309040483</string>
 </resources>

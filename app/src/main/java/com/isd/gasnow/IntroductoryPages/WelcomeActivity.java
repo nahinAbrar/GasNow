@@ -49,4 +49,9 @@ public class WelcomeActivity extends AppCompatActivity {
         ActivityOptions activityOptions = ActivityOptions.makeSceneTransitionAnimation(WelcomeActivity.this,pairs);
         startActivity(intent, activityOptions.toBundle());
     }
+
+    public void callProcedure(View view){
+        startActivity(new Intent(WelcomeActivity.this, WorkingProcedure.class));
+    }
+
 }

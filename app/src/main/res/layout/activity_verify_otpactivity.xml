@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     android:id="@+id/verifyLayout"
     tools:context=".SignUp.VerifyOTPActivity"
-    android:background="@color/light_white"
     android:padding="30dp">
 
 
@@ -28,20 +27,20 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/code"
-            android:textSize="100sp"
+            android:textSize="68sp"
             android:fontFamily="@font/dosis_bold"
             android:textColor="@color/black"
             android:textAllCaps="true"
             android:layout_gravity="center"
             android:includeFontPadding="false"
-            android:layout_marginTop="90dp"
+
             />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/verification"
-            android:textSize="24sp"
+            android:textSize="19sp"
             android:fontFamily="@font/dosis_bold"
             android:textColor="@color/black"
             android:textAllCaps="true"
@@ -49,11 +48,22 @@
             android:includeFontPadding="false"
             />
 
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/welcomeAnimationView"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            app:lottie_rawRes="@raw/otp_anim"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_marginTop="20dp"
+            />
+
         <TextView
             android:id="@+id/verifyOTPText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Enter One Time OTP Sent on +8801309040483"
+            android:text="@string/enter_one_time_otp_sent_on_8801309040483"
             android:textSize="18sp"
             android:layout_marginTop="50dp"
             android:fontFamily="@font/dosis"

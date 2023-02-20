@@ -52,10 +52,10 @@
         app:layout_constraintTop_toBottomOf="@+id/orderItemName" />
 
     <ImageView
-        android:id="@+id/orderMinusIcon"
+        android:id="@+id/orderPlusIcon"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:src="@drawable/minus"
+        android:src="@drawable/plus"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -75,16 +75,16 @@
         android:layout_marginEnd="10dp"
         app:layout_constraintHorizontal_bias="1"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/orderMinusIcon"
+        app:layout_constraintEnd_toStartOf="@+id/orderPlusIcon"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/orderPlusIcon"
+        android:id="@+id/orderMinusIcon"
         android:layout_width="35dp"
         android:layout_height="35dp"
-        android:src="@drawable/plus"
-        android:layout_marginEnd="10dp"
+        android:src="@drawable/minus"
+        android:layout_marginEnd="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/orderQuantity"
         app:layout_constraintHorizontal_bias="1"

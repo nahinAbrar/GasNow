@@ -7,7 +7,7 @@
     android:padding="30dp"
     tools:context=".Login.LoginActivity"
     android:transitionName="transition_login"
-    android:background="@color/light_white">
+>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:background="@drawable/black_border"
-                android:backgroundTint="@color/pastel_sky"
+
                 app:ccp_autoDetectCountry="true"
                 app:ccp_showFlag="true"
                 app:ccp_showFullName="true"
@@ -94,7 +94,7 @@
                 app:endIconMode="password_toggle"
                 app:endIconTint="@color/black"
                 app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/tala"
+                app:startIconDrawable="@drawable/password"
                 app:endIconDrawable="@drawable/custom_eye"
                 app:startIconTint="@color/black">
 

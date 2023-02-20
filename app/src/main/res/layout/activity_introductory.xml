@@ -13,10 +13,10 @@
         android:layout_height="900dp"
         android:contentDescription="@string/intro_background"
         android:scaleType="centerCrop"
-        android:src="@drawable/welcome_blur" />
+        android:src="@drawable/splash_main" />
 
     <LinearLayout
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
@@ -25,21 +25,20 @@
 
         <ImageView
             android:id="@+id/introLogo"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="400dp"
+            android:layout_height="200dp"
             android:src="@drawable/logo"
             android:contentDescription="@string/intro_logo"
             android:layout_marginTop="80dp"
             />
 
-        <TextView
-            android:id="@+id/introSlogan"
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/splashAnimationView"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fulfil Gas Needs"
-            android:textColor="@color/light_white"
-            android:textSize="30sp"
-            android:fontFamily="@font/bellota_bold"/>
+            android:layout_height="380dp"
+            app:lottie_rawRes="@raw/splash"
+            app:lottie_autoPlay="true"
+            />
 
     </LinearLayout>
 
@@ -52,7 +51,7 @@
         android:fontFamily="@font/bellota_bold"
         android:gravity="center"
         android:text="@string/copy"
-        android:textColor="@color/light_white" />
+        android:textColor="@color/black" />
 
 
     <com.cuberto.liquid_swipe.LiquidPager

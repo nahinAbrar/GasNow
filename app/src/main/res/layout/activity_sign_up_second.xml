@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="30dp"
-    android:background="@color/light_white"
     tools:context=".SignUp.SignUpSecondActivity">
 
     <LinearLayout
@@ -55,7 +54,7 @@
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/black"
                 app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/map"
+                app:startIconDrawable="@drawable/area"
                 app:startIconTint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -78,7 +77,7 @@
                 app:endIconMode="clear_text"
                 app:endIconTint="@color/black"
                 app:hintTextColor="@color/black"
-                app:startIconDrawable="@drawable/address"
+                app:startIconDrawable="@drawable/location"
                 app:startIconTint="@color/black">
 
                 <com.google.android.material.textfield.TextInputEditText

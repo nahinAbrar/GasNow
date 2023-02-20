@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:padding="30dp"
-    android:background="@color/light_white"
     tools:context=".SignUp.SignUpThirdActivity"
     android:id="@+id/signupThirdScrollView"
     android:transitionName="transition_OTP_screen">
@@ -49,7 +48,6 @@
                 android:id="@+id/signupThirdCodePicker"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:backgroundTint="@color/pastel_sky"
                 android:background="@drawable/black_border"
                 app:ccp_autoDetectCountry="true"
                 app:ccp_showFlag="true"

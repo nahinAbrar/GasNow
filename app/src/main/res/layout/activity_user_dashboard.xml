@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashBoard.UserDashboard"
-    tools:openDrawer="start"
+    tools:openDrawer="close"
     android:id="@+id/nav_drawer_layout">
     
     <com.google.android.material.navigation.NavigationView
@@ -13,7 +13,6 @@
         android:id="@+id/nav_navigationview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/light_white"
         android:layout_gravity="start"
         app:headerLayout="@layout/menu_header"
         app:menu="@menu/main_menu"
@@ -70,8 +69,9 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
-                    android:fontFamily="sans-serif-black"
+                    android:fontFamily="@font/dosis_bold"
                     android:text="@string/gas_now"
+                    android:textColor="@color/black"
                     android:textSize="28sp"/>
 
                 <RelativeLayout
@@ -238,17 +238,22 @@
                     android:id="@+id/dashboardFeaturedCard"
                     android:layout_width="170dp"
                     android:layout_height="280dp"
-                    android:layout_margin="10dp"
-                    android:onClick="CallStore"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="10dp"
                     android:background="@color/pastel_blue"
+                    android:onClick="CallStore"
                     android:orientation="vertical">
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_marginLeft="10dp"
+                        android:layout_marginStart="10dp"
                         android:layout_marginTop="50dp"
                         android:text="@string/featured_locations"
+                        android:fontFamily="@font/dosis_bold"
+                        android:textColor="@color/white"
                         android:textAllCaps="true"
                         android:textSize="25sp" />
 
@@ -256,6 +261,8 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_margin="10dp"
+                        android:fontFamily="@font/dosis"
+                        android:textColor="@color/white"
                         android:text="@string/featured_text" />
 
 
@@ -271,6 +278,7 @@
             </RelativeLayout>
 
             <LinearLayout
+                android:id="@+id/mostViewedLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -284,7 +292,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
+                        android:fontFamily="@font/dosis_bold"
                         android:text="@string/most_viewed"
                         android:textAllCaps="true"
                         android:textSize="20sp" />
@@ -310,6 +318,7 @@
             </LinearLayout>
 
             <LinearLayout
+                android:id="@+id/categoriesLayout"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="30dp"
@@ -324,7 +333,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="sans-serif"
+                        android:fontFamily="@font/dosis_bold"
                         android:text="@string/categories"
                         android:textAllCaps="true"
                         android:textSize="20sp" />

@@ -6,8 +6,7 @@
     android:layout_height="match_parent"
     tools:context=".PasswordReset.ForgetPassSuccessMessageActivity"
     android:padding="30dp"
-    android:orientation="vertical"
-    android:background="@color/light_white">
+    android:orientation="vertical">
 
 
     <ImageView
@@ -32,21 +31,21 @@
             android:layout_marginTop="30dp"
             android:fontFamily="@font/dosis_bold"
             android:includeFontPadding="false"
-            android:text="Password Updated"
+            android:text="@string/password_updated"
             android:textAllCaps="true"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textAlignment="center"
             />
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/tick_96"
-            android:layout_marginTop="50dp"
-            app:tint="@color/darker_blue"
-            android:layout_margin="20dp"/>
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/welcomeAnimationView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:lottie_rawRes="@raw/confirm"
+            app:lottie_autoPlay="true"
+            android:layout_margin="10dp"
+            />
 
 
         <TextView

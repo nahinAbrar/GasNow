@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/pastel_sky"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:padding="30dp"
     tools:context=".IntroductoryPages.WelcomeActivity">
 
@@ -12,13 +12,13 @@
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
-        <ImageView
-
-            android:layout_width="match_parent"
-            android:layout_height="402dp"
-            android:contentDescription="@string/welcome_image"
-            android:src="@drawable/landing"
-
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/welcomeAnimationView"
+            android:layout_width="wrap_content"
+            android:layout_height="400dp"
+            app:lottie_rawRes="@raw/login_signup_anim"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
             />
 
         <TextView
@@ -76,10 +76,11 @@
             android:id="@+id/wcHGWBtn"
             android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginTop="15dp"
             android:textColor="@color/black"
             android:background="@drawable/secondary_button_design"
             android:layout_weight="1"
+            android:onClick="callProcedure"
             android:text="@string/how_gas_now_works"
             style="?android:attr/buttonBarButtonStyle" />
 

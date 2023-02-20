@@ -4,8 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".User.UserProfileFragment"
-    android:background="@color/light_white">
+    tools:context=".User.UserProfileFragment">
 
 
     <LinearLayout
@@ -220,7 +219,7 @@
                 <com.google.android.material.textfield.TextInputEditText
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:drawableStart="@drawable/map"
+                    android:drawableStart="@drawable/area"
                     android:drawablePadding="10dp"
                     android:inputType="text"
                     android:text="Motijheel"/>
