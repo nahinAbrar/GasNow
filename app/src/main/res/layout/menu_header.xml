@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="200dp"
-    android:background="@color/light_white"
+    android:background="@color/white"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:paddingLeft="15dp">
 
     <TextView
@@ -11,14 +12,16 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="10dp"
-        android:text="Fulfil Gas Needs!" />
+        android:fontFamily="@font/dosis"
+        android:textColor="@color/black"
+        android:text="@string/fulfil_gas_needs" />
 
     <TextView
         android:id="@+id/header_appname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_above="@id/header_slogan"
-        android:fontFamily="sans-serif"
+        android:fontFamily="@font/dosis_bold"
         android:text="@string/gas_now"
         android:textColor="@color/black"
         android:textSize="24sp" />
@@ -29,12 +32,18 @@
         android:layout_above="@id/header_appname"
         android:src="@drawable/gas_icon" />
 
-    <ImageView
-        android:layout_width="160dp"
-        android:layout_height="175dp"
-        android:layout_alignParentRight="true"
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/welcomeAnimationView"
+        android:layout_width="170dp"
+        android:layout_height="170dp"
+        android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:src="@drawable/app_logo_final" />
+        app:lottie_rawRes="@raw/welcome"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        android:layout_margin="10dp"
+        />
 
 
 </RelativeLayout>

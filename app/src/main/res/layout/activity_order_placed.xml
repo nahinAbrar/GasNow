@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Transactions.OrderPlaced">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:fontFamily="@font/dosis_bold"
+            android:includeFontPadding="false"
+            android:text="@string/order_placed"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:textSize="40sp"
+            android:textAlignment="center"
+            />
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/welcomeAnimationView"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:lottie_rawRes="@raw/order_placed"
+            app:lottie_autoPlay="true"
+            app:lottie_loop="true"
+            android:layout_margin="10dp"
+            />
+
+        <Button
+            android:layout_width="200dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/button_design"
+            android:fontFamily="@font/dosis"
+            android:onClick="CallDashboardPage"
+            android:text="Home"
+            android:textColor="@color/white"
+
+
+            />
+
+
+    </LinearLayout>
+
+</LinearLayout>

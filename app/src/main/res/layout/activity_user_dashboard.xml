@@ -2,21 +2,20 @@
 <androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".DashBoard.UserDashboard"
-    tools:openDrawer="close"
-    android:id="@+id/nav_drawer_layout">
-    
+    tools:openDrawer="open">
+
     <com.google.android.material.navigation.NavigationView
-        android:theme="@style/navigationTheme"
         android:id="@+id/nav_navigationview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="start"
+        android:theme="@style/navigationTheme"
         app:headerLayout="@layout/menu_header"
-        app:menu="@menu/main_menu"
-        />
+        app:menu="@menu/main_menu" />
 
     <LinearLayout
         android:id="@+id/content"
@@ -24,341 +23,363 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="20dp">
-
-        <ImageView
-            android:id="@+id/navbar_menuIcon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:layout_centerVertical="true"
-            android:contentDescription="@string/menu_icon"
-            android:elevation="4dp"
-            android:src="@drawable/menu_icon" />
-
-        <ImageView
-            android:id="@+id/dashboard_profile_icon"
-            android:layout_width="40dp"
-            android:layout_height="40dp"
-            android:onClick="callProfile"
-            android:layout_alignParentEnd="true"
-            android:contentDescription="@string/profile_icon"
-            android:layout_centerVertical="true"
-            android:elevation="4dp"
-            android:padding="5dp"
-            android:src="@drawable/user" />
-    </RelativeLayout>
-
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-        <LinearLayout
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="vertical">
+            android:layout_height="wrap_content"
+            android:padding="20dp">
 
-            <RelativeLayout
+            <ImageView
+                android:id="@+id/navbar_menuIcon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/menu_icon"
+                android:elevation="4dp"
+                android:src="@drawable/menu_icon"
+                app:tint="@color/black" />
+
+            <ImageView
+                android:id="@+id/dashboard_profile_icon"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/profile_icon"
+                android:elevation="4dp"
+                android:onClick="callProfile"
+                android:padding="5dp"
+                android:src="@drawable/user"
+                app:tint="@color/black" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
-
-                <TextView
-                    android:id="@+id/dashboardLogoText"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerHorizontal="true"
-                    android:fontFamily="@font/dosis_bold"
-                    android:text="@string/gas_now"
-                    android:textColor="@color/black"
-                    android:textSize="28sp"/>
+                android:layout_height="match_parent"
+                android:orientation="vertical">
 
                 <RelativeLayout
-                    android:id="@+id/dashboardSearchBar"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
-                    android:onClick="callMaps"
-                    android:layout_below="@id/dashboardLogoText"
-                    android:layout_marginLeft="40dp"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/dashboardLogoText"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:fontFamily="@font/dosis_bold"
+                        android:text="@string/gas_now"
+                        android:textColor="@color/black"
+                        android:textSize="28sp" />
+
+                    <RelativeLayout
+                        android:id="@+id/dashboardSearchBar"
+                        android:layout_width="match_parent"
+                        android:layout_height="40dp"
+                        android:layout_below="@id/dashboardLogoText"
+                        android:layout_marginLeft="40dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="40dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@color/white"
+                        android:elevation="8dp"
+                        android:onClick="callMaps">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="15dp"
+                            android:fontFamily="@font/dosis"
+                            android:text="@string/search_nearby"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                        <ImageView
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginEnd="15dp"
+                            android:src="@drawable/search_96" />
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/card_shape"
+                            android:elevation="8dp"
+                            android:onClick="callItemsDash">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/station_icon" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/dosis"
+                            android:gravity="center_horizontal"
+                            android:text="@string/gas_station"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/card_shape2"
+                            android:elevation="8dp"
+                            android:onClick="callItemsDash">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/gas_store" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/dosis"
+                            android:gravity="center_horizontal"
+                            android:text="@string/gas_store"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/card_shape3"
+                            android:elevation="8dp"
+                            android:onClick="callItemsDash">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/retail_store" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/dosis"
+                            android:gravity="center_horizontal"
+                            android:text="@string/retail_store"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="60dp"
+                            android:layout_height="60dp"
+                            android:layout_margin="10dp"
+                            android:background="@drawable/card_shape4"
+                            android:elevation="8dp">
+
+                            <ImageView
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/cust_care" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/dosis"
+                            android:gravity="center_horizontal"
+                            android:text="@string/care"
+                            android:textAlignment="center"
+                            android:textColor="@color/black"
+                            android:textSize="15sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
                     android:layout_marginTop="20dp"
-                    android:layout_marginRight="40dp"
-                    android:layout_marginBottom="20dp"
-                    android:background="@color/white"
-                    android:elevation="8dp">
+                    android:elevation="10dp"
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_centerVertical="true"
-                        android:layout_marginStart="15dp"
-                        android:text="@string/search_nearby" />
+                    >
 
-                    <ImageView
-                        android:layout_width="30dp"
-                        android:layout_height="30dp"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="15dp"
-                        android:src="@drawable/search_96" />
-                </RelativeLayout>
-
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center"
-                android:orientation="horizontal">
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/card_shape"
-                        android:elevation="8dp">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/gas_station" />
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/gas_station"
-                        android:textAlignment="center" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/card_shape2"
-                        android:elevation="8dp">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/gas_store" />
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/gas_store"
-                        android:textAlignment="center" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/card_shape3"
-                        android:elevation="8dp">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/retail_store" />
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/retail_store"
-                        android:textAlignment="center" />
-
-                </LinearLayout>
-
-                <LinearLayout
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:orientation="vertical">
-
-                    <RelativeLayout
-                        android:layout_width="60dp"
-                        android:layout_height="60dp"
-                        android:layout_margin="10dp"
-                        android:background="@drawable/card_shape4"
-                        android:elevation="8dp">
-
-                        <ImageView
-                            android:layout_width="30dp"
-                            android:layout_height="30dp"
-                            android:layout_centerInParent="true"
-                            android:src="@drawable/cust_care" />
-                    </RelativeLayout>
-
-                    <TextView
-                        android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:gravity="center_horizontal"
-                        android:text="@string/care"
-                        android:textAlignment="center" />
-
-                </LinearLayout>
-
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="20dp"
-                >
-
-                <LinearLayout
-                    android:id="@+id/dashboardFeaturedCard"
-                    android:layout_width="170dp"
-                    android:layout_height="280dp"
-                    android:layout_marginStart="10dp"
-                    android:layout_marginTop="10dp"
-                    android:layout_marginEnd="10dp"
-                    android:layout_marginBottom="10dp"
-                    android:background="@color/pastel_blue"
-                    android:onClick="CallStore"
-                    android:orientation="vertical">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                    <LinearLayout
+                        android:id="@+id/dashboardFeaturedCard"
+                        android:layout_width="170dp"
+                        android:layout_height="280dp"
                         android:layout_marginStart="10dp"
-                        android:layout_marginTop="50dp"
-                        android:text="@string/featured_locations"
-                        android:fontFamily="@font/dosis_bold"
-                        android:textColor="@color/white"
-                        android:textAllCaps="true"
-                        android:textSize="25sp" />
+                        android:layout_marginTop="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_marginBottom="10dp"
+                        android:background="@color/pastel_blue"
+                        android:orientation="vertical">
 
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="10dp"
-                        android:fontFamily="@font/dosis"
-                        android:textColor="@color/white"
-                        android:text="@string/featured_text" />
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="10dp"
+                            android:layout_marginTop="70dp"
+                            android:fontFamily="@font/dosis_bold"
+                            android:text="@string/featured_locations"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textSize="25sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:fontFamily="@font/dosis"
+                            android:text="@string/featured_text"
+                            android:textColor="@color/white" />
+
+
+                    </LinearLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/dashboardFeaturedRecycleView"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp"
+                        android:layout_toEndOf="@id/dashboardFeaturedCard" />
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/mostViewedLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:elevation="10dp"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/dosis_bold"
+                            android:text="@string/most_viewed"
+                            android:textAllCaps="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:id="@+id/userDashboardMostViewed"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif"
+                            android:onClick="callItemsDash"
+                            android:text="@string/view_all" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/dashboardMostviewedRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp" />
 
 
                 </LinearLayout>
 
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/dashboardFeaturedRecycleView"
+                <LinearLayout
+                    android:id="@+id/categoriesLayout"
                     android:layout_width="match_parent"
-                    android:layout_height="300dp"
-                    android:layout_toEndOf="@id/dashboardFeaturedCard" />
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:elevation="10dp"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/dosis_bold"
+                            android:text="@string/categories"
+                            android:textAllCaps="true"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:fontFamily="sans-serif"
+                            android:onClick="callCategories"
+                            android:text="@string/view_all" />
+
+                    </RelativeLayout>
+
+                    <androidx.recyclerview.widget.RecyclerView
+                        android:id="@+id/dashboardCategoriesRecyclerView"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent" />
 
 
-            </RelativeLayout>
-
-            <LinearLayout
-                android:id="@+id/mostViewedLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/dosis_bold"
-                        android:text="@string/most_viewed"
-                        android:textAllCaps="true"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:id="@+id/userDashboardMostViewed"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:onClick="callItemsDash"
-                        android:layout_centerVertical="true"
-                        android:fontFamily="sans-serif"
-                        android:text="@string/view_all" />
-
-                </RelativeLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/dashboardMostviewedRecyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="150dp" />
-
+                </LinearLayout>
 
             </LinearLayout>
-
-            <LinearLayout
-                android:id="@+id/categoriesLayout"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="30dp"
-
-                android:orientation="vertical"
-                android:padding="20dp">
-
-                <RelativeLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:fontFamily="@font/dosis_bold"
-                        android:text="@string/categories"
-                        android:textAllCaps="true"
-                        android:textSize="20sp" />
-
-                    <TextView
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:onClick="callCategories"
-                        android:fontFamily="sans-serif"
-                        android:text="@string/view_all" />
-
-                </RelativeLayout>
-
-                <androidx.recyclerview.widget.RecyclerView
-                    android:id="@+id/dashboardCategoriesRecyclerView"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent" />
-
-
-            </LinearLayout>
-
-        </LinearLayout>
-    </ScrollView>
+        </ScrollView>
 
     </LinearLayout>
 

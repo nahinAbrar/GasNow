@@ -24,6 +24,7 @@
         android:text="@string/gas"
         android:textSize="20sp"
         android:fontFamily="@font/dosis_bold"
+        android:textColor="@color/black"
         android:layout_marginTop="10dp"
         android:layout_gravity="center"/>
 

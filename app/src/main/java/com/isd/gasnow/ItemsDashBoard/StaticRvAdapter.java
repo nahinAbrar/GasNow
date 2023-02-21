@@ -49,11 +49,11 @@ public class StaticRvAdapter extends RecyclerView.Adapter<StaticRvAdapter.Static
 
         if(check){
             ArrayList<DynamicRvModel> items = new ArrayList<DynamicRvModel>();
-            items.add(new DynamicRvModel("LPG Gas Cylinder 12Kg", R.drawable.gas_store,0));
-            items.add(new DynamicRvModel("LPG Gas Cylinder 22Kg", R.drawable.gas_store,0));
-            items.add(new DynamicRvModel("LPG Gas Cylinder 28Kg", R.drawable.gas_store,0));
-            items.add(new DynamicRvModel("LPG Gas Cylinder 40Kg", R.drawable.gas_store,0));
-            items.add(new DynamicRvModel("LPG Gas Cylinder 50Kg", R.drawable.gas_store,0));
+            items.add(new DynamicRvModel("Bashundhara LP 12Kg", R.drawable.lpg,0));
+            items.add(new DynamicRvModel("Bashundhara LP 22Kg", R.drawable.lpg,0));
+            items.add(new DynamicRvModel("Bashundhara LP 30Kg", R.drawable.lpg,0));
+            items.add(new DynamicRvModel("Beximco LP 12Kg", R.drawable.lpg,0));
+            items.add(new DynamicRvModel("Beximco LP 22Kg", R.drawable.lpg,0));
 
             updateRecyclerView.callback(position, items);
             check = false;
@@ -68,35 +68,35 @@ public class StaticRvAdapter extends RecyclerView.Adapter<StaticRvAdapter.Static
                 if(position == 0)
                 {
                     ArrayList<DynamicRvModel> items = new ArrayList<DynamicRvModel>();
-                    items.add(new DynamicRvModel("LPG Gas Cylinder 12Kg", R.drawable.gas_store,0));
-                    items.add(new DynamicRvModel("LPG Gas Cylinder 22Kg", R.drawable.gas_store,0));
-                    items.add(new DynamicRvModel("LPG Gas Cylinder 28Kg", R.drawable.gas_store,0));
-                    items.add(new DynamicRvModel("LPG Gas Cylinder 40Kg", R.drawable.gas_store,0));
-                    items.add(new DynamicRvModel("LPG Gas Cylinder 50Kg", R.drawable.gas_store,0));
+                    items.add(new DynamicRvModel("Bashundhara LP 12Kg", R.drawable.lpg,0));
+                    items.add(new DynamicRvModel("Bashundhara LP 22Kg", R.drawable.lpg,0));
+                    items.add(new DynamicRvModel("Bashundhara LP 30Kg", R.drawable.lpg,0));
+                    items.add(new DynamicRvModel("Beximco LP 12Kg", R.drawable.lpg,0));
+                    items.add(new DynamicRvModel("Beximco LP 22Kg", R.drawable.lpg,0));
 
                     updateRecyclerView.callback(position, items);
 
                 }else if(position == 1) {
 
                     ArrayList<DynamicRvModel> items = new ArrayList<DynamicRvModel>();
-                    items.add(new DynamicRvModel("Octane 1", R.drawable.gas_icon,1));
-                    items.add(new DynamicRvModel("Octane 2", R.drawable.gas_icon,1));
-                    items.add(new DynamicRvModel("Octane 3", R.drawable.gas_icon,1));
+                    items.add(new DynamicRvModel("Disel 1", R.drawable.fire,1));
+                    items.add(new DynamicRvModel("Disel 2", R.drawable.fire,1));
+                    items.add(new DynamicRvModel("Disel 3", R.drawable.fire,1));
                     updateRecyclerView.callback(position, items);
                 }else if(position == 2) {
 
                     ArrayList<DynamicRvModel> items = new ArrayList<DynamicRvModel>();
-                    items.add(new DynamicRvModel("Disel 1", R.drawable.gas_station,2));
-                    items.add(new DynamicRvModel("Disel 2", R.drawable.gas_station,2));
-                    items.add(new DynamicRvModel("Disel 3", R.drawable.gas_station,2));
+                    items.add(new DynamicRvModel("Station 1 Octane", R.drawable.octane,2));
+                    items.add(new DynamicRvModel("Station 2 Octane", R.drawable.octane,2));
+                    items.add(new DynamicRvModel("Station 3 Octane", R.drawable.octane,2));
                     updateRecyclerView.callback(position, items);
                 }
                 else if(position == 3) {
 
                     ArrayList<DynamicRvModel> items = new ArrayList<DynamicRvModel>();
-                    items.add(new DynamicRvModel("Oil 1", R.drawable.retail_store,3));
-                    items.add(new DynamicRvModel("Oil 2", R.drawable.retail_store,3));
-                    items.add(new DynamicRvModel("Oil 3", R.drawable.retail_store,3));
+                    items.add(new DynamicRvModel("Oil 5Kg", R.drawable.oil,3));
+                    items.add(new DynamicRvModel("Oil 10Kg", R.drawable.oil,3));
+                    items.add(new DynamicRvModel("Oil 15Kg", R.drawable.oil,3));
                     updateRecyclerView.callback(position, items);
                 }
             }

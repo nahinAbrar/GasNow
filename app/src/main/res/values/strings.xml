@@ -64,7 +64,7 @@
     <string name="most_viewed">Most Viewed</string>
     <string name="categories">Categories</string>
     <string name="gas_station">Gas Station</string>
-    <string name="gas_store">Gas Store</string>
+    <string name="gas_store">LPG Store</string>
     <string name="retail_store">Retail Store</string>
     <string name="care">Care</string>
     <string name="featured_locations">Featured Locations</string>
@@ -108,4 +108,28 @@
         \nFrontend designs are covered by Fahim \u0026 Afia.\nBackend and Frontend\'s overall combination was covered by Nahin.\nApp\'s logos/icons/photos have been taken from looka, unsplash, pichon, freepik, flaticon respectively.</string>
     <string name="password_updated">Password Updated</string>
     <string name="enter_one_time_otp_sent_on_8801309040483">Enter One Time OTP Sent on +8801309040483</string>
+    <string name="household_gas_nneeds">Household Gas\nNeeds</string>
+    <string name="show_all">Show All</string>
+    <string name="vehicle_fuel">Vehicle Fuel</string>
+    <string name="business_nsolutions">Business \nSolutions</string>
+    <string name="cylinder_name">Cylinder Name</string>
+    <string name="karim_and_sons">Karim &amp; Sons</string>
+    <string name="rating">4.6</string>
+    <string name="_314_reviews">(314 Reviews)</string>
+    <string name="time_span">06:00-02:00</string>
+    <string name="beximko_cylinder_20kg">Beximko Cylinder 20Kg</string>
+    <string name="station_name">Station Name</string>
+    <string name="fulfil_gas_needs">Fulfil Gas Needs!</string>
+    <string name="area">Area</string>
+    <string name="address">Address</string>
+    <string name="no_orders_found">No Orders Found</string>
+    <string name="profile">Profile</string>
+    <string name="history">History</string>
+    <string name="manage">Manage</string>
+    <string name="products">Products</string>
+    <string name="cart">Cart</string>
+    <string name="logout">Logout</string>
+    <string name="share">Share</string>
+    <string name="rate_us">Rate us</string>
+    <string name="order_placed">Order Placed!</string>
 </resources>

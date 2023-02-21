@@ -16,7 +16,7 @@
             android:id="@+id/mostViewed_Image1"
             android:layout_width="100dp"
             android:layout_height="150dp"
-            android:src="@drawable/card1"
+            android:src="@drawable/lpg"
             android:scaleType="centerCrop"
             />
         
@@ -26,7 +26,7 @@
             android:layout_height="wrap_content"
             android:layout_toEndOf="@id/mostViewed_Image1"
             android:layout_marginStart="10dp"
-            android:text="@string/gas_station"
+            android:text="product name"
             android:textSize="20sp"
             android:fontFamily="sans-serif"
             />
@@ -39,7 +39,9 @@
             android:layout_below="@id/mostViewed_Title"
             android:layout_toEndOf="@id/mostViewed_Image1"
             android:layout_marginLeft="10dp"
-            android:rating="5"/>
+            android:layout_marginTop="5dp"
+            android:theme="@style/RatingBar"
+            android:rating="4"/>
 
         <TextView
             android:id="@+id/dashboardMostviewed_Desc"

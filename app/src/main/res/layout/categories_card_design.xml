@@ -12,7 +12,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:padding="15dp"
-        android:background="@color/pastel_sky">
+        android:background="@color/light_white">
 
         <TextView
             android:id="@+id/categoryTitle"
@@ -20,15 +20,16 @@
             android:layout_height="wrap_content"
             android:text="@string/gas_station"
             android:textSize="20sp"
-            android:fontFamily="sans-serif"
+            android:textColor="@color/black"
+            android:fontFamily="@font/dosis_bold"
             />
 
         <ImageView
             android:id="@+id/categoryImage"
             android:layout_width="110dp"
-            android:layout_height="110dp"
+            android:layout_height="85dp"
             android:src="@drawable/card1"
-            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentBottom="true"
 
 

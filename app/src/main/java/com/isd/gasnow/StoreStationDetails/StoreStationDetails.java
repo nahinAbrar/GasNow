@@ -32,10 +32,10 @@ public class StoreStationDetails extends AppCompatActivity implements UpdateRecy
         pos = intent.getIntExtra("pos",0);
 
         ArrayList<StaticRvModel2> items = new ArrayList<>();
-        items.add(new StaticRvModel2(R.drawable.gas_store,pos));
-        items.add(new StaticRvModel2(R.drawable.gas_icon,pos));
-        items.add(new StaticRvModel2(R.drawable.gas_store,pos));
-        items.add(new StaticRvModel2(R.drawable.gas_station,pos));
+        items.add(new StaticRvModel2(R.drawable.lpg,pos));
+        items.add(new StaticRvModel2(R.drawable.fire,pos));
+        items.add(new StaticRvModel2(R.drawable.octane,pos));
+        items.add(new StaticRvModel2(R.drawable.oil,pos));
 
         RecyclerView recyclerView = findViewById(R.id.store_stat_rv01);
         StaticRvAdapter2 staticRvAdapter = new StaticRvAdapter2(items, this, this);
@@ -43,9 +43,9 @@ public class StoreStationDetails extends AppCompatActivity implements UpdateRecy
         recyclerView.setAdapter(staticRvAdapter);
 
         ArrayList<DynamicRvModel2> item = new ArrayList<>();
-        item.add(new DynamicRvModel2("LPG Gas Cylinder 48Kg", 3500));
-        item.add(new DynamicRvModel2("LPG Gas Cylinder 22Kg", 3500));
-        item.add(new DynamicRvModel2("LPG Gas Cylinder 28Kg", 3500));
+        item.add(new DynamicRvModel2("Bashundhara Lp 12 Kg", 1200));
+        item.add(new DynamicRvModel2("Bashundhara Lp 22 Kg", 1500));
+        item.add(new DynamicRvModel2("Bashundhara Lp 30 Kg", 2800));
         dRecyclerView = findViewById(R.id.store_stat_rv02);
         dynamicRvAdapter = new DynamicRvAdapter2(item,context,updateSelectedItems);
         dRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

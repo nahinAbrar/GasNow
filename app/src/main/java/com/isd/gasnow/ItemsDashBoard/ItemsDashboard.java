@@ -27,10 +27,10 @@ public class ItemsDashboard extends AppCompatActivity implements UpdateRecyclerV
         setContentView(R.layout.activity_items_dashboard);
 
         ArrayList<StaticRvModel> items = new ArrayList<>();
-        items.add(new StaticRvModel(R.drawable.gas_store, "LPG Cylinder"));
-        items.add(new StaticRvModel(R.drawable.gas_icon, "Disel"));
-        items.add(new StaticRvModel(R.drawable.gas_store, "Octane"));
-        items.add(new StaticRvModel(R.drawable.gas_station, "Oil"));
+        items.add(new StaticRvModel(R.drawable.lpg, "LP Gas"));
+        items.add(new StaticRvModel(R.drawable.fire, "Disel"));
+        items.add(new StaticRvModel(R.drawable.octane, "Octane"));
+        items.add(new StaticRvModel(R.drawable.oil, "Oil"));
 
         recyclerView = findViewById(R.id.itemsDashRV01);
         staticRvAdapter = new StaticRvAdapter(items, this, this);
@@ -38,13 +38,11 @@ public class ItemsDashboard extends AppCompatActivity implements UpdateRecyclerV
         recyclerView.setAdapter(staticRvAdapter);
 
         ArrayList<DynamicRvModel> item = new ArrayList();
-        item.add(new DynamicRvModel("Cylinder 20Kg", R.drawable.gas_icon,0));
-        item.add(new DynamicRvModel("Cylinder 40Kg", R.drawable.gas_icon,0));
-        item.add(new DynamicRvModel("Cylinder 60Kg", R.drawable.gas_icon,0));
-        item.add(new DynamicRvModel("Cylinder 22Kg", R.drawable.gas_icon,0));
-        item.add(new DynamicRvModel("Cylinder 14Kg", R.drawable.gas_icon,0));
-        item.add(new DynamicRvModel("Cylinder 18Kg", R.drawable.gas_icon,0));
-        item.add(new DynamicRvModel("Cylinder 32Kg", R.drawable.gas_icon,0));
+        item.add(new DynamicRvModel("Bashundhara LP 12Kg", R.drawable.lpg,0));
+        item.add(new DynamicRvModel("Bashundhara LP 22Kg", R.drawable.lpg,0));
+        item.add(new DynamicRvModel("Bashundhara LP 30Kg", R.drawable.lpg,0));
+        item.add(new DynamicRvModel("Beximco LP 12Kg", R.drawable.lpg,0));
+        item.add(new DynamicRvModel("Beximco LP 22Kg", R.drawable.lpg,0));
         dRecyclerView = findViewById(R.id.itemsDashRV02);
         dynamicRvAdapter = new DynamicRvAdapter(item);
         dRecyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false));

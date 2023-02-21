@@ -60,24 +60,24 @@ public class StaticRvAdapter2 extends RecyclerView.Adapter<StaticRvAdapter2.Stat
                 updateRecyclerView.callback2(position, items);
             } else if (p==1) {
                 ArrayList<DynamicRvModel2> items = new ArrayList<DynamicRvModel2>();
-                items.add(new DynamicRvModel2("Octane 1", 3500));
-                items.add(new DynamicRvModel2("Octane 2", 3500));
-                items.add(new DynamicRvModel2("Octane 3", 80));
-                updateRecyclerView.callback2(position, items);
-            }else if(p == 2) {
-
-                ArrayList<DynamicRvModel2> items = new ArrayList<DynamicRvModel2>();
                 items.add(new DynamicRvModel2("Disel 1", 110));
                 items.add(new DynamicRvModel2("Disel 2", 110));
                 items.add(new DynamicRvModel2("Disel 3", 110));
+
+                updateRecyclerView.callback2(position, items);
+            }else if(p == 2) {
+                ArrayList<DynamicRvModel2> items = new ArrayList<DynamicRvModel2>();
+                items.add(new DynamicRvModel2("Station 1 Octane", 3500));
+                items.add(new DynamicRvModel2("Station 2 Octane", 3500));
+                items.add(new DynamicRvModel2("Station 3 Octane", 2000));
                 updateRecyclerView.callback2(position, items);
             }
             else if(p == 3) {
 
                 ArrayList<DynamicRvModel2> items = new ArrayList<DynamicRvModel2>();
-                items.add(new DynamicRvModel2("Oil 1", 110));
-                items.add(new DynamicRvModel2("Oil 2", 110));
-                items.add(new DynamicRvModel2("Oil 3", 110));
+                items.add(new DynamicRvModel2("Oil 5Kg", 110));
+                items.add(new DynamicRvModel2("Oil 10Kg", 110));
+                items.add(new DynamicRvModel2("Oil 15Kg", 110));
                 updateRecyclerView.callback2(position, items);
             }
             check = false;
@@ -92,33 +92,33 @@ public class StaticRvAdapter2 extends RecyclerView.Adapter<StaticRvAdapter2.Stat
                 if(position == 0)
                 {
                     ArrayList<DynamicRvModel2> items = new ArrayList<DynamicRvModel2>();
-                    items.add(new DynamicRvModel2("LPG Gas Cylinder 12Kg", 110));
-                    items.add(new DynamicRvModel2("LPG Gas Cylinder 22Kg", 110));
-                    items.add(new DynamicRvModel2("LPG Gas Cylinder 28Kg", 110));
+                    items.add(new DynamicRvModel2("LPG Gas Cylinder 35Kg", 3500));
+                    items.add(new DynamicRvModel2("LPG Gas Cylinder 22Kg", 3500));
+                    items.add(new DynamicRvModel2("LPG Gas Cylinder 28Kg", 3500));
 
                     updateRecyclerView.callback2(position, items);
 
                 }else if(position == 1) {
 
                     ArrayList<DynamicRvModel2> items = new ArrayList<DynamicRvModel2>();
-                    items.add(new DynamicRvModel2("Octane 1", 80));
-                    items.add(new DynamicRvModel2("Octane 2", 80));
-                    items.add(new DynamicRvModel2("Octane 3", 80));
+                    items.add(new DynamicRvModel2("Disel 1", 110));
+                    items.add(new DynamicRvModel2("Disel 2", 110));
+                    items.add(new DynamicRvModel2("Disel 3", 110));
                     updateRecyclerView.callback2(position, items);
                 }else if(position == 2) {
 
                     ArrayList<DynamicRvModel2> items = new ArrayList<DynamicRvModel2>();
-                    items.add(new DynamicRvModel2("Disel 1", 80));
-                    items.add(new DynamicRvModel2("Disel 2", 80));
-                    items.add(new DynamicRvModel2("Disel 3", 80));
+                    items.add(new DynamicRvModel2("Station 1 Octane", 3500));
+                    items.add(new DynamicRvModel2("Station 2 Octane", 3500));
+                    items.add(new DynamicRvModel2("Station 3 Octane", 2000));
                     updateRecyclerView.callback2(position, items);
                 }
                 else if(position == 3) {
 
                     ArrayList<DynamicRvModel2> items = new ArrayList<DynamicRvModel2>();
-                    items.add(new DynamicRvModel2("Oil 1", 80));
-                    items.add(new DynamicRvModel2("Oil 2", 80));
-                    items.add(new DynamicRvModel2("Oil 3", 80));
+                    items.add(new DynamicRvModel2("Oil 5Kg", 110));
+                    items.add(new DynamicRvModel2("Oil 10Kg", 110));
+                    items.add(new DynamicRvModel2("Oil 15Kg", 110));
                     updateRecyclerView.callback2(position, items);
                 }
             }

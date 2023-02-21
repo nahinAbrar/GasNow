@@ -26,8 +26,9 @@
             android:id="@+id/dynamic2Name"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Beximko Cylinder 20Kg"
+            android:text="@string/beximko_cylinder_20kg"
             android:textSize="18sp"
+            android:fontFamily="@font/dosis_bold"
             app:layout_constraintVertical_bias=".15"
             app:layout_constraintHorizontal_bias=".1"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -39,8 +40,9 @@
             android:id="@+id/dynamic2Price"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="1500 BDT"
+            android:text="@string/price"
             android:textSize="14sp"
+            android:fontFamily="@font/dosis"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0"
@@ -50,8 +52,8 @@
 
         <ImageView
             android:id="@+id/add_to_cart"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/shopping_cart_96px"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
@@ -63,8 +65,8 @@
 
         <ImageView
             android:id="@+id/add_to_cart_done"
-            android:layout_width="20dp"
-            android:layout_height="20dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:src="@drawable/tick"
             android:visibility="invisible"
             app:layout_constraintBottom_toBottomOf="parent"

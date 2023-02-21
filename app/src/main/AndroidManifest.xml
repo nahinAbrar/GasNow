@@ -17,6 +17,9 @@
         android:theme="@style/Theme.GasNow"
         tools:targetApi="31">
         <activity
+            android:name=".Transactions.OrderPlaced"
+            android:exported="false" />
+        <activity
             android:name=".IntroductoryPages.WorkingProcedure"
             android:exported="false" />
         <activity

@@ -21,6 +21,7 @@ import com.isd.gasnow.ItemsDashBoard.ItemsDashboard;
 import com.isd.gasnow.MainActivity;
 import com.isd.gasnow.R;
 import com.isd.gasnow.StoreStationDetails.StoreStationDetails;
+import com.isd.gasnow.Transactions.ConfirmOrder;
 import com.isd.gasnow.User.UserProfileDashboard;
 
 import java.util.ArrayList;
@@ -118,8 +119,16 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         String _area = getIntent().getStringExtra("area");
         String _address = getIntent().getStringExtra("address");
         switch (item.getItemId()) {
-            case R.id.nav_logout:
-                Intent intent = new Intent(getApplicationContext(), WelcomeActivity.class);
+            case R.id.nav_home:
+                Intent intent = new Intent(getApplicationContext(), UserDashboard.class);
+                startActivity(intent);
+                break;
+            case R.id.nav_products:
+                intent = new Intent(getApplicationContext(), ItemsDashboard.class);
+                startActivity(intent);
+                break;
+            case R.id.nav_cart:
+                intent = new Intent(getApplicationContext(), ConfirmOrder.class);
                 startActivity(intent);
                 break;
             case R.id.nav_profile:
@@ -132,6 +141,12 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
                 intent.putExtra("address",_address);
                 startActivity(intent);
                 break;
+            case R.id.nav_logout:
+                 intent = new Intent(getApplicationContext(), WelcomeActivity.class);
+                startActivity(intent);
+                finish();
+                break;
+
         }
 
         return true;
@@ -155,7 +170,7 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         ArrayList<CategoriesHelperClass> categoriesHelperClasses = new ArrayList<>();
         categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card1, "Household Gas/Fuel"));
         categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card2, "Vehicle Gas"));
-        categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.card2, "Business Solutions"));
+        categoriesHelperClasses.add(new CategoriesHelperClass(R.drawable.refuel, "Business Solutions"));
         categoriesRecycler.setHasFixedSize(true);
         adapter = new CategoriesAdapter(categoriesHelperClasses);
         categoriesRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
@@ -167,8 +182,11 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         mostViewedRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         ArrayList<MostViewedAdapterHelperClass> mostViewedAdapterHelperClassArrayList = new ArrayList<>();
-        mostViewedAdapterHelperClassArrayList.add(new MostViewedAdapterHelperClass(R.drawable.card1, "Gas", "Lorem ipsum abc abc sjdsjddskd"));
-        mostViewedAdapterHelperClassArrayList.add(new MostViewedAdapterHelperClass(R.drawable.card2, "Store", "Lorem ipsum abc abc sjdsjddskd"));
+        mostViewedAdapterHelperClassArrayList.add(new MostViewedAdapterHelperClass(R.drawable.lpg, "Bashundhara LPG 22Kg", "Price : 2200 BDT"));
+        mostViewedAdapterHelperClassArrayList.add(new MostViewedAdapterHelperClass(R.drawable.lpg, "Beximco LPG 22Kg", "Price : 2100 BDT"));
+        mostViewedAdapterHelperClassArrayList.add(new MostViewedAdapterHelperClass(R.drawable.oil, "Oil 15Kg", "Price : 3000 BDT"));
+        mostViewedAdapterHelperClassArrayList.add(new MostViewedAdapterHelperClass(R.drawable.octane, "Station 2 Octane", "Price : 130 BDT/Litre"));
+
 
         adapter = new MostViewedAdapter(mostViewedAdapterHelperClassArrayList);
         mostViewedRecycler.setAdapter(adapter);
@@ -179,8 +197,9 @@ public class UserDashboard extends AppCompatActivity implements NavigationView.O
         featureRecycler.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false));
 
         ArrayList<FeaturedHelperClass> featuredHelperClassArrayList = new ArrayList<>();
-        featuredHelperClassArrayList.add(new FeaturedHelperClass(R.drawable.card1, "Gas", "Lorem ipsum"));
-        featuredHelperClassArrayList.add(new FeaturedHelperClass(R.drawable.card2, "Store", "Lorem ipsum"));
+        featuredHelperClassArrayList.add(new FeaturedHelperClass(R.drawable.gas_station, "Karim & Sons", "Motijheel C/A"));
+        featuredHelperClassArrayList.add(new FeaturedHelperClass(R.drawable.gas_station_2, "Rahman Filling", "Toyenbee Rd · Near Ittefaq Bus Stand"));
+        featuredHelperClassArrayList.add(new FeaturedHelperClass(R.drawable.store_1, "Beximco LPG", " Level 11, \u200BSAM TOWER, Plot 4 Rd 22, Dhaka 1212"));
 
         adapter = new FeaturedAdapter(featuredHelperClassArrayList);
         featureRecycler.setAdapter(adapter);

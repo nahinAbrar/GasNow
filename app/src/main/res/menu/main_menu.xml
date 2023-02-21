@@ -4,46 +4,46 @@
     <group android:checkableBehavior="single">
       <item
           android:id="@+id/nav_home"
-          android:title="Home"
+          android:title="@string/home"
           android:icon="@drawable/home_outlined_96"/>
         <item
-            android:id="@+id/nav_orders"
-            android:title="Orders"
+            android:id="@+id/nav_products"
+            android:title="@string/products"
             android:icon="@drawable/purchase_order_96px"/>
         <item
-            android:id="@+id/nav_all_categories"
-            android:title="Cart"
+            android:id="@+id/nav_cart"
+            android:title="@string/cart"
             android:icon="@drawable/shopping_cart_96px"/>
     </group>
 
-    <item android:title="Profile">
+    <item android:title="@string/profile">
         <menu>
 
             <group android:checkableBehavior="single">
                 <item
                     android:id="@+id/nav_profile"
-                    android:title="Profile"
+                    android:title="@string/profile"
                     android:icon="@drawable/user"/>
                 <item
                     android:id="@+id/nav_logout"
-                    android:title="Logout"
+                    android:title="@string/logout"
                     android:icon="@drawable/logout_96"/>
             </group>
         </menu>
 
     </item>
 
-    <item android:title="Share">
+    <item android:title="@string/share">
         <menu>
 
             <group android:checkableBehavior="none">
                 <item
                     android:id="@+id/nav_share"
-                    android:title="Share"
+                    android:title="@string/share"
                     android:icon="@drawable/share_96"/>
                 <item
                     android:id="@+id/nav_rateus"
-                    android:title="Rate us"
+                    android:title="@string/rate_us"
                     android:icon="@drawable/rate_96"/>
 
             </group>

@@ -66,6 +66,7 @@
                 android:layout_width="0dp"
                 android:layout_height="125dp"
                 android:layout_weight="1"
+                app:cardCornerRadius="20dp"
                 app:cardBackgroundColor="@color/darker_blue"
                 app:cardElevation="10dp"
                 android:layout_margin="10dp"
@@ -118,6 +119,7 @@
                 android:layout_width="0dp"
                 android:layout_height="125dp"
                 android:layout_weight="1"
+                app:cardCornerRadius="20dp"
                 app:cardBackgroundColor="@color/darker_blue"
                 app:cardElevation="10dp"
                 android:layout_margin="10dp"
@@ -177,7 +179,8 @@
                 android:id="@+id/dashboardFullName"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Full Name"
+                android:hint="@string/full_name"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:hintTextColor="@color/darker_blue"
                 android:layout_marginBottom="10dp">
 
@@ -194,7 +197,8 @@
                 android:id="@+id/dashboardEmail"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Email"
+                android:hint="@string/email"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:hintTextColor="@color/darker_blue"
                 android:layout_marginBottom="10dp">
 
@@ -212,7 +216,8 @@
                 android:id="@+id/dashboardArea"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Area"
+                android:hint="@string/area"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:hintTextColor="@color/darker_blue"
                 android:layout_marginBottom="10dp">
 
@@ -230,7 +235,8 @@
                 android:id="@+id/dashboardAddress"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Address"
+                android:hint="@string/address"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                 app:hintTextColor="@color/darker_blue"
                 android:layout_marginBottom="10dp">
 

@@ -17,7 +17,7 @@
             android:id="@+id/featured_image1"
             android:layout_width="match_parent"
             android:layout_height="140dp"
-            android:src="@drawable/card1"
+            android:src="@drawable/gas_station"
             android:scaleType="centerCrop"
             android:contentDescription="@string/featuredimage1"
             />
@@ -26,15 +26,18 @@
             android:id="@+id/featured_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Station"
-            android:textSize="20sp"
-            android:fontFamily="sans-serif"
+            android:text="@string/station_name"
+            android:textSize="18sp"
+            android:fontFamily="@font/dosis_bold"
+            android:textColor="@color/black"
             />
 
         <RatingBar
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:rating="3.5"
+            android:layout_marginTop="5dp"
+            android:theme="@style/RatingBar"
             style="@style/Widget.AppCompat.RatingBar.Small"
 
             />
@@ -42,8 +45,11 @@
         <TextView
             android:id="@+id/featured_text1"
             android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
             android:layout_height="wrap_content"
             android:text="@string/dummy"
+            android:fontFamily="@font/dosis"
+            android:textColor="@color/black"
 
             />
     </LinearLayout>
